@@ -1,27 +1,17 @@
-class Project {
-  final String? title, image, description, date, source1, source2, source3;
-  final int? type;
+import 'package:portfolio/data/models/Source.dart';
 
-  // mode of projects
-  // using type = 0 or 1 or 2 or 3 or 4 or 5
-  // when be 0 is project did't have  any link and invisable text button in ui
-  // when be 1 is project have link as android only in ui
-  // when be 2 is project have link as ios only in ui
-  // when be 3 is project have link as android and ios in ui
-  // when be 4 is project have link as android and website in ui
-  // when be 5 is project have link as ios and website in ui
-  // when be 6 is project have link as android and ios and website in ui
-  // when be 7 is project have link as viewLink in ui and link be in source1 and other sources be empty
+class Project {
+  final String? title, image, description, date;
+  final int? project_type;
+  final Source? source;
 
   Project(
       {this.title,
       this.image,
       this.description,
       this.date,
-      this.type,
-      this.source1,
-      this.source2,
-      this.source3});
+      this.project_type,
+      this.source,});
 }
 
 List<Project> demo_projects = [
@@ -29,45 +19,37 @@ List<Project> demo_projects = [
     title: "project name",
     image: "",
     description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 0,
-    source1: "",
-    source2: "",
-    source3: "",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: "link android"),
   ),
   Project(
     title: "project name1",
     image: "",
     description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 1,
-    source1: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source2: "",
-    source3: "",
+    project_type: 2,
+    source:Source(name: 'android',link1: "link android"),
   ),
   Project(
     title: "project name2",
     image:"",
     description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xx",
     date: "23 JUN 2021",
-    type: 2,
-    source1: "",
-    source2: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source3: "",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: "link android",link2: "link ios"),
   ),
   Project(
     title: "project name3",
     image:"",
     description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 3,
-    source1: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source2: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source3: "",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: 'android' ,link2: 'ios',link3: 'website'),
   ),
   Project(
     title: "project name4",
@@ -75,10 +57,8 @@ List<Project> demo_projects = [
     description:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 4,
-    source1: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source2: "",
-    source3: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    project_type: 3,
+    source:Source(name: 'ios',link1: "link ios"),
   ),
   Project(
     title: "project name5",
@@ -86,10 +66,8 @@ List<Project> demo_projects = [
     description:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 5,
-    source1: "",
-    source2: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source3: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    project_type: 4,
+    source:Source(name: 'website',link1: "link website"),
   ),
   Project(
     title: "project name6",
@@ -97,10 +75,8 @@ List<Project> demo_projects = [
     description:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 6,
-    source1: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source2: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    source3: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: "link android"),
   ),
   Project(
     title: "project name7",
@@ -108,10 +84,8 @@ List<Project> demo_projects = [
     description:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 7,
-    source1: "",
-    source2: "",
-    source3: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: "link android"),
   ),
   Project(
     title: "project name8",
@@ -119,9 +93,7 @@ List<Project> demo_projects = [
     description:
     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     date: "23 JUN 2021",
-    type: 0,
-    source1: "",
-    source2: "",
-    source3: "",
+    project_type: 1,
+    source:Source(name: 'flutter',link1: "link android"),
   ),
 ];

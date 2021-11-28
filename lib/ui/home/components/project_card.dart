@@ -18,8 +18,8 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
-      shadowColor: Color(0xc8f1d697),
+      elevation: 8,
+      shadowColor: Color(0xff336587),
       child: Container(
         padding: const EdgeInsets.all(defaultPadding),
         color: cardProjectColor,
@@ -43,24 +43,39 @@ class ProjectCard extends StatelessWidget {
             Spacer(),
             Text(
               project.description!,
-              maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
+              maxLines: Responsive.isMobileLarge(context) ? 2 : 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(height: 1.5, color: Colors.black45),
             ),
             Spacer(),
-            ElevatedButton (
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                    horizontal: defaultPadding * 2,
-                    vertical: defaultPadding),
-                backgroundColor: primaryColor,
-              ),
-              child: Text(
-                  projectType(project.type!),
-                style: TextStyle(color: Colors.black),
-              ),
+            Text(
+              "View Project >>> ",
+              maxLines: Responsive.isMobileLarge(context) ? 2 : 2,
+              overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.headline5!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color:primaryColor,
+                )
             ),
+            // ButtonTheme(
+            //   minWidth:Responsive.isMobileLarge(context) ? 70.0 : 100.0 ,
+            //   height: 50.0,
+            //   child: ElevatedButton (
+            //     autofocus: true,
+            //     onPressed: () {},
+            //     style: TextButton.styleFrom(
+            //       padding: EdgeInsets.symmetric(
+            //           horizontal: defaultPadding * 2,
+            //           vertical: defaultPadding),
+            //       backgroundColor: primaryColor,
+            //     ),
+            //     child: Text(
+            //        project.source!.name.toString(),
+            //       style: TextStyle(color: Colors.white),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
@@ -69,23 +84,3 @@ class ProjectCard extends StatelessWidget {
 }
 
 
- projectType(int type) {
-  switch (type) {
-    case 1:
-      return "Android";
-    case 2:
-      return "IOS";
-    case 3:
-      return "Website";
-    case 4 :
-      return "View Link";
-    case 0:
-      return "Read More >>";
-    case 5:
-      return "Read More >>";
-    case 6:
-      return "Read More >>";
-    case 7:
-      return "Read More >>";
-  }
-}

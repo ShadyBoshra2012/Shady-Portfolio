@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "5670569879",
+    "project_id": "portfolio-d87da",
+    "storage_bucket": "portfolio-d87da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5670569879:android:729b9a5f2a6717c125a6d2",
+        "android_client_info": {
+          "package_name": "com.minamagid.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5670569879-llnbnhd4atm67f950f5uiurnf8a6m7pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minamagid.portfolio",
+            "certificate_hash": "b05bba0b584c73924ad2490578d1322e692df1bc"
+          }
+        },
+        {
+          "client_id": "5670569879-ndf4jcmklc0pctsan2mn62kokficl5n1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjVJVpYuZCyDXN31leEgHUt564mKd5tZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5670569879-ndf4jcmklc0pctsan2mn62kokficl5n1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

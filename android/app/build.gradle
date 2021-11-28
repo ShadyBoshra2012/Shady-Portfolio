@@ -29,6 +29,11 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 android {
     compileSdkVersion 30
 
+    ndkVersion '23.1.7779620'
+    defaultConfig {
+        multiDexEnabled true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -45,7 +50,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.minamagid.portfolio"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -66,7 +71,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation platform('com.google.data.firebase:data.firebase-bom:29.0.0')
-    implementation 'com.google.data.firebase:data.firebase-analytics-ktx'
+//    implementation platform('com.google.data.firebase:data.firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics:20.0.0'
 
 }

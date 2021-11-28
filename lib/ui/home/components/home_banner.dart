@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/ui/main/main_componant/skillsAvatar.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({
@@ -16,47 +17,71 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/bg3.jpg",
             fit: BoxFit.cover,
           ),
-          Container(color: darkColor.withOpacity(0.46)),
+          // Container(color: darkColor.withOpacity(0.46)),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Discover my Amazing \nArt Space!",
-                  style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.headline3!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          )
-                      : Theme.of(context).textTheme.headline5!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SkillsAvatar(),
+                      Column(
+                        children: [
+                          Text(
+                            "Hello",
+                            style: Responsive.isDesktop(context)
+                                ? Theme.of(context).textTheme.headline3!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 70,
+                              color: Color(0xff898888),
+                            )
+                                : Theme.of(context).textTheme.headline5!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff898888),
+                            ),
                           ),
-                ),
-                if (Responsive.isMobileLarge(context))
-                  const SizedBox(height: defaultPadding / 2),
-                MyBuildAnimatedText(),
-                SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton (
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
-                      backgroundColor: primaryColor,
-                    ),
-                    child: Text(
-                      "Go",
-                      style: TextStyle(color: Colors.black),
-                    ),
+                          Text(
+                            "Iam Shady",
+                            style: Responsive.isDesktop(context)
+                                ? Theme.of(context).textTheme.headline3!.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color:Color(0xffd5bc35),
+                                    )
+                                : Theme.of(context).textTheme.headline5!.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffd5bc35),
+                                    ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-              ],
+                  if (Responsive.isMobileLarge(context))
+                    const SizedBox(height: defaultPadding / 2),
+                  MyBuildAnimatedText(),
+                  SizedBox(height: defaultPadding),
+                  if (!Responsive.isMobileLarge(context))
+                    ElevatedButton (
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: defaultPadding * 2,
+                            vertical: defaultPadding),
+                        backgroundColor: primaryColor,
+                      ),
+                      child: Text(
+                        "Contact Me",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                ],
+              ),
             ),
           )
         ],
@@ -78,16 +103,16 @@ class MyBuildAnimatedText extends StatelessWidget {
       maxLines: 1,
       child: Row(
         children: [
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
+          // if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("I'm "),
+          Text("I'm  ",style: TextStyle(color: Colors.black),),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+          // if (!Responsive.isMobileLarge(context)) ,
         ],
       ),
     );
@@ -104,11 +129,11 @@ class AnimatedText extends StatelessWidget {
     return AnimatedTextKit(
       animatedTexts: [
         TyperAnimatedText(
-          "Mid level Flutter developer",
+          "Mid level Flutter developer",textStyle: TextStyle(color: Colors.black),
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "Founder of Be Light Tech",
+          "Founder of Be Light Tech",textStyle: TextStyle(color: Colors.black),
           speed: Duration(milliseconds: 60),
         ),
       ],

@@ -13,15 +13,55 @@ class MyProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
+        Divider(),
         Padding(
-          padding: EdgeInsets.fromLTRB(4.0,25.0,4.0,0),
-          child: Text(
-            "My Projects",
-            style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Row(
+            // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            children: [
+              Container(padding:const EdgeInsets.fromLTRB(4,4,4,0),
+                  child: Icon(Icons.animation,size: Responsive.isDesktop(context)?60:35,)),
+              Text(
+                "My Projects >>>> ",
+                style: Responsive.isDesktop(context)
+                    ? Theme.of(context).textTheme.headline3!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color:Color(0xffd5bc35),
+                )
+                    : Theme.of(context).textTheme.headline5!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xffd5bc35),
+                ),
+              ),
+            ],
           ),
         ),
-        SizedBox(height: defaultPadding),
+        Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Row(
+            // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            children: [
+              Container(padding:const EdgeInsets.fromLTRB(4,0,4,0),
+                  child: Icon(Icons.adjust_outlined,size: Responsive.isDesktop(context)?40:20,)),
+              Text(
+                "FLUTTER",
+                style: Responsive.isDesktop(context)
+                    ? Theme.of(context).textTheme.headline6!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color:Color(0xff2489de),
+                )
+                    : Theme.of(context).textTheme.headline6!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  color: Color(0xff2489de),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: defaultPadding/2),
         Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,

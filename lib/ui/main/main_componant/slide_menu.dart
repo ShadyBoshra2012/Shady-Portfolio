@@ -5,12 +5,13 @@ import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/data/models/Work_experience.dart';
 import 'package:portfolio/data/repository/my_repository.dart';
+import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/main/main_componant/area_info_text.dart';
 import 'package:portfolio/ui/main/main_componant/front_end.dart';
 import 'package:portfolio/ui/main/main_componant/languages.dart';
 import 'package:portfolio/ui/main/main_componant/skills.dart';
 
-import 'my_info.dart';
+import 'education.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -23,12 +24,35 @@ class SideMenu extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            MyInfo(),
+            Education(),
             Expanded(
               child: SingleChildScrollView(
                 padding: EdgeInsets.all(defaultPadding),
                 child: Column(
                   children: [
+                    Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            bottom: defaultPadding),
+                        child: Text(
+                          "PERSONAL INFORMATION",
+                          style: Responsive.isDesktop(context)
+                              ? Theme.of(context).textTheme.headline5!.copyWith(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 20,
+                            color: Colors.black,
+                          )
+                              : Theme.of(context).textTheme.headline6!.copyWith(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 14,
+                            color: Colors.black,
+                          ),            ),
+                      ),
+                    ),
+                    const AreaInfoText(
+                      title: "Date of Birth",
+                      text: "08 Aug, 1998",
+                    ),
                     const AreaInfoText(
                       title: "Nationality",
                       text: "Egyptian",
@@ -41,10 +65,30 @@ class SideMenu extends StatelessWidget {
                       title: "Military",
                       text: "Final Exemption",
                     ),
-                    Skills(),
-                    SizedBox(height: defaultPadding),
-                    Languages(),
-                    FrontEnd(),
+                    Divider(),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                          vertical: defaultPadding),
+                      child: Text(
+                        "LANGUAGES",
+                        style: Responsive.isDesktop(context)
+                            ? Theme.of(context).textTheme.headline5!.copyWith(
+                          fontWeight: FontWeight.w200,
+                          color: Colors.black,
+                        )
+                            : Theme.of(context).textTheme.headline6!.copyWith(
+                          fontWeight: FontWeight.w200,
+                          color: Colors.black,
+                        ),            ),
+                    ),
+                    const AreaInfoText(
+                      title: "ARABIC",
+                      text: "NATIVE",
+                    ),
+                    const AreaInfoText(
+                      title: "ENGLISH",
+                      text: "INTERMEDIATE",
+                    ),
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
                     TextButton(
