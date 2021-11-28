@@ -15,7 +15,7 @@ class SkillsAvatar extends StatelessWidget {
       child: AvatarGlow(
         startDelay: Duration(milliseconds: 1000),
         glowColor: Colors.black12,
-        endRadius: Responsive.isDesktop(context)? 120 :70.0,
+        endRadius: Responsive.isDesktop(context) ? 120 : 70.0,
         duration: Duration(milliseconds: 2000),
         repeat: true,
         showTwoGlows: true,
@@ -26,7 +26,7 @@ class SkillsAvatar extends StatelessWidget {
           child: CircleAvatar(
             backgroundColor: Colors.grey[100],
             backgroundImage: AssetImage("assets/images/shady.jpg"),
-            radius: Responsive.isDesktop(context)? 100.0 :50.0,
+            radius: Responsive.isDesktop(context) ? 100.0 : 50.0,
             // shape: BoxShape.circle
           ),
         ),
@@ -36,5 +36,4 @@ class SkillsAvatar extends StatelessWidget {
       ),
     );
   }
-
 }

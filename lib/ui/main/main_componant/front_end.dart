@@ -15,22 +15,22 @@ class FrontEnd extends StatelessWidget {
       padding: EdgeInsets.all(52.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:  [
+        children: [
           Divider(),
           Padding(
-            padding: EdgeInsets.symmetric(
-                vertical: defaultPadding),
+            padding: EdgeInsets.symmetric(vertical: defaultPadding),
             child: Text(
               "Front-End",
               style: Responsive.isDesktop(context)
                   ? Theme.of(context).textTheme.headline4!.copyWith(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              )
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      )
                   : Theme.of(context).textTheme.headline5!.copyWith(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),            ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+            ),
           ),
           FrontEndText(text: "ReactJS"),
           FrontEndText(text: "HTML - CSS - Bootstrap"),
@@ -56,9 +56,20 @@ class FrontEndText extends StatelessWidget {
       padding: EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
         children: [
-          Icon(Icons.check,size: Responsive.isDesktop(context)?50:20,color: primaryColor,),
+          Icon(
+            Icons.check,
+            size: Responsive.isDesktop(context) ? 50 : 20,
+            color: primaryColor,
+          ),
           SizedBox(width: defaultPadding / 2),
-          Text(text,style: TextStyle(fontSize:Responsive.isDesktop(context)?30:Responsive.isTablet(context)?9:7,)),
+          Text(text,
+              style: TextStyle(
+                fontSize: Responsive.isDesktop(context)
+                    ? 30
+                    : Responsive.isTablet(context)
+                        ? 9
+                        : 7,
+              )),
         ],
       ),
     );

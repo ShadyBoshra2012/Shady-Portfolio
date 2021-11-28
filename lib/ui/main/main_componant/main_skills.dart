@@ -20,19 +20,23 @@ class MainSkills extends StatelessWidget {
           Row(
             // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             children: [
-              Container(padding:const EdgeInsets.only(bottom: 8),
-                  child: Icon(Icons.accessibility_new,size: Responsive.isDesktop(context)?60:35,)),
+              Container(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Icon(
+                    Icons.accessibility_new,
+                    size: Responsive.isDesktop(context) ? 60 : 35,
+                  )),
               Text(
                 "WORK EXPERIENCE",
-                  style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.headline3!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color:Color(0xffd5bc35),
-                  )
-                      : Theme.of(context).textTheme.headline5!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xffd5bc35),
-                  ),
+                style: Responsive.isDesktop(context)
+                    ? Theme.of(context).textTheme.headline3!.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffd5bc35),
+                        )
+                    : Theme.of(context).textTheme.headline5!.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffd5bc35),
+                        ),
               ),
             ],
           ),
@@ -53,16 +57,22 @@ class MainSkills extends StatelessWidget {
                               "Skills",
                               textAlign: TextAlign.center,
                               style: Responsive.isDesktop(context)
-                                  ? Theme.of(context).textTheme.headline4!.copyWith(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 180,
-                                color:Color(0xffd5bc35),
-                              )
-                                  : Theme.of(context).textTheme.headline5!.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 55,
-                                color: Color(0xffd5bc35),
-                              ),
+                                  ? Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 180,
+                                        color: Color(0xffd5bc35),
+                                      )
+                                  : Theme.of(context)
+                                      .textTheme
+                                      .headline5!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 55,
+                                        color: Color(0xffd5bc35),
+                                      ),
                             ),
                           ],
                         ),
@@ -77,7 +87,7 @@ class MainSkills extends StatelessWidget {
               Expanded(
                 flex: 4,
                 child: Padding(
-                  padding:  EdgeInsets.all(12.0),
+                  padding: EdgeInsets.all(12.0),
                   child: Column(
                     children: [
                       Padding(
@@ -93,7 +103,7 @@ class MainSkills extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
                                   ),
-                          ),
+                        ),
                       ),
                       Padding(
                         padding: Responsive.isDesktop(context) &&

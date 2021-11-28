@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/data/models/Project.dart';
+import 'package:portfolio/data/models/project.dart';
 import 'package:portfolio/responsive.dart';
 import 'project_card.dart';
 
@@ -20,19 +20,23 @@ class MyProjects extends StatelessWidget {
           child: Row(
             // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             children: [
-              Container(padding:const EdgeInsets.fromLTRB(4,4,4,0),
-                  child: Icon(Icons.animation,size: Responsive.isDesktop(context)?60:35,)),
+              Container(
+                  padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                  child: Icon(
+                    Icons.animation,
+                    size: Responsive.isDesktop(context) ? 60 : 35,
+                  )),
               Text(
                 "My Projects >>>> ",
                 style: Responsive.isDesktop(context)
                     ? Theme.of(context).textTheme.headline3!.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color:Color(0xffd5bc35),
-                )
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffd5bc35),
+                        )
                     : Theme.of(context).textTheme.headline5!.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xffd5bc35),
-                ),
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffd5bc35),
+                        ),
               ),
             ],
           ),
@@ -42,26 +46,30 @@ class MyProjects extends StatelessWidget {
           child: Row(
             // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             children: [
-              Container(padding:const EdgeInsets.fromLTRB(4,0,4,0),
-                  child: Icon(Icons.adjust_outlined,size: Responsive.isDesktop(context)?40:20,)),
+              Container(
+                  padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                  child: Icon(
+                    Icons.adjust_outlined,
+                    size: Responsive.isDesktop(context) ? 40 : 20,
+                  )),
               Text(
                 "FLUTTER",
                 style: Responsive.isDesktop(context)
                     ? Theme.of(context).textTheme.headline6!.copyWith(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                  color:Color(0xff2489de),
-                )
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          color: Color(0xff2489de),
+                        )
                     : Theme.of(context).textTheme.headline6!.copyWith(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16,
-                  color: Color(0xff2489de),
-                ),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0xff2489de),
+                        ),
               ),
             ],
           ),
         ),
-        SizedBox(height: defaultPadding/2),
+        SizedBox(height: defaultPadding / 2),
         Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,

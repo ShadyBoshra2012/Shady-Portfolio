@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (_) => WorkExperienceBloc(
-          myRepository: MyRepository(),
-        )..add(LoadWorkExperience()),
+      create: (_) => WorkExperienceBloc(
+        myRepository: MyRepository(),
+      )..add(LoadWorkExperience()),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Portfolio',
@@ -27,14 +27,12 @@ class MyApp extends StatelessWidget {
           primaryColor: primaryColor,
           scaffoldBackgroundColor: bgColor,
           canvasColor: bgColor,
-          textTheme: GoogleFonts.poppinsTextTheme(Theme
-              .of(context)
-              .textTheme)
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
               .apply(bodyColor: Colors.white)
               .copyWith(
-            bodyText1: TextStyle(color: bodyTextColor),
-            bodyText2: TextStyle(color: bodyTextColor),
-          ),
+                bodyText1: TextStyle(color: bodyTextColor),
+                bodyText2: TextStyle(color: bodyTextColor),
+              ),
         ),
         home: HomeScreen(),
       ),

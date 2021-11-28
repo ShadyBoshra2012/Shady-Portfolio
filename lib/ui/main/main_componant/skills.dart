@@ -17,14 +17,15 @@ class Skills extends StatelessWidget {
           // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Skills",
-            style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
         const Padding(
-          padding: EdgeInsets.fromLTRB(0,18.0,0,14.0),
+          padding: EdgeInsets.fromLTRB(0, 18.0, 0, 14.0),
           child: Text(
             "Environments",
-            style: TextStyle(color: Colors.black45,fontWeight: FontWeight.bold),
+            style:
+                TextStyle(color: Colors.black45, fontWeight: FontWeight.bold),
           ),
         ),
         Column(
@@ -53,7 +54,8 @@ class Skills extends StatelessWidget {
                 ),
               ],
             ),
-            Row(children: [
+            Row(
+              children: [
                 Expanded(
                   child: AnimatedCircularProgressIndicator(
                     percentage: 0.55,
@@ -74,7 +76,8 @@ class Skills extends StatelessWidget {
                     label: "Git",
                   ),
                 )
-              ],),
+              ],
+            ),
           ],
         ),
       ],

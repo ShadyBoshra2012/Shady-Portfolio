@@ -15,7 +15,7 @@ class Languages extends StatelessWidget {
       padding: EdgeInsets.all(52.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:  [
+        children: [
           Divider(),
           Padding(
             padding: EdgeInsets.symmetric(vertical: defaultPadding),
@@ -23,13 +23,14 @@ class Languages extends StatelessWidget {
               "Languages",
               style: Responsive.isDesktop(context)
                   ? Theme.of(context).textTheme.headline4!.copyWith(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              )
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      )
                   : Theme.of(context).textTheme.headline5!.copyWith(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),            ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+            ),
           ),
           AnimatedLinearProgressIndicator(
             percentage: 0.95,

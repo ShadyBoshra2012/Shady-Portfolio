@@ -28,7 +28,8 @@ class HomeBanner extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.start,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SkillsAvatar(),
                       Column(
@@ -36,24 +37,36 @@ class HomeBanner extends StatelessWidget {
                           Text(
                             "Hello",
                             style: Responsive.isDesktop(context)
-                                ? Theme.of(context).textTheme.headline3!.copyWith(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 70,
-                              color: Color(0xff898888),
-                            )
-                                : Theme.of(context).textTheme.headline5!.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff898888),
-                            ),
+                                ? Theme.of(context)
+                                    .textTheme
+                                    .headline3!
+                                    .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 70,
+                                      color: Color(0xff898888),
+                                    )
+                                : Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff898888),
+                                    ),
                           ),
                           Text(
                             "Iam Shady",
                             style: Responsive.isDesktop(context)
-                                ? Theme.of(context).textTheme.headline3!.copyWith(
+                                ? Theme.of(context)
+                                    .textTheme
+                                    .headline3!
+                                    .copyWith(
                                       fontWeight: FontWeight.bold,
-                                      color:Color(0xffd5bc35),
+                                      color: Color(0xffd5bc35),
                                     )
-                                : Theme.of(context).textTheme.headline5!.copyWith(
+                                : Theme.of(context)
+                                    .textTheme
+                                    .headline5!
+                                    .copyWith(
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xffd5bc35),
                                     ),
@@ -67,7 +80,7 @@ class HomeBanner extends StatelessWidget {
                   MyBuildAnimatedText(),
                   SizedBox(height: defaultPadding),
                   if (!Responsive.isMobileLarge(context))
-                    ElevatedButton (
+                    ElevatedButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.symmetric(
@@ -104,9 +117,12 @@ class MyBuildAnimatedText extends StatelessWidget {
       child: Row(
         children: [
           if (!Responsive.isMobileLarge(context))
-          // if (!Responsive.isMobileLarge(context))
+            // if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("I'm  ",style: TextStyle(color: Colors.black),),
+          Text(
+            "I'm  ",
+            style: TextStyle(color: Colors.black),
+          ),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
@@ -129,11 +145,13 @@ class AnimatedText extends StatelessWidget {
     return AnimatedTextKit(
       animatedTexts: [
         TyperAnimatedText(
-          "Mid level Flutter developer",textStyle: TextStyle(color: Colors.black),
+          "Mid level Flutter developer",
+          textStyle: TextStyle(color: Colors.black),
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "Founder of Be Light Tech",textStyle: TextStyle(color: Colors.black),
+          "Founder of Be Light Tech",
+          textStyle: TextStyle(color: Colors.black),
           speed: Duration(milliseconds: 60),
         ),
       ],

@@ -21,7 +21,10 @@ class MainScreen extends StatelessWidget {
                   onPressed: () {
                     Scaffold.of(context).openDrawer();
                   },
-                  icon: Icon(Icons.menu,color: Colors.black12,),
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.black12,
+                  ),
                 ),
               ),
             ),

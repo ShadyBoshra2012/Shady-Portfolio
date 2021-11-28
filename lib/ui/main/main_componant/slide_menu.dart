@@ -32,21 +32,21 @@ class SideMenu extends StatelessWidget {
                   children: [
                     Center(
                       child: Padding(
-                        padding: EdgeInsets.only(
-                            bottom: defaultPadding),
+                        padding: EdgeInsets.only(bottom: defaultPadding),
                         child: Text(
                           "PERSONAL INFORMATION",
                           style: Responsive.isDesktop(context)
                               ? Theme.of(context).textTheme.headline5!.copyWith(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 20,
-                            color: Colors.black,
-                          )
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                  )
                               : Theme.of(context).textTheme.headline6!.copyWith(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 14,
-                            color: Colors.black,
-                          ),            ),
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                  ),
+                        ),
                       ),
                     ),
                     const AreaInfoText(
@@ -67,19 +67,19 @@ class SideMenu extends StatelessWidget {
                     ),
                     Divider(),
                     Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: defaultPadding),
+                      padding: EdgeInsets.symmetric(vertical: defaultPadding),
                       child: Text(
                         "LANGUAGES",
                         style: Responsive.isDesktop(context)
                             ? Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.w200,
-                          color: Colors.black,
-                        )
+                                  fontWeight: FontWeight.w200,
+                                  color: Colors.black,
+                                )
                             : Theme.of(context).textTheme.headline6!.copyWith(
-                          fontWeight: FontWeight.w200,
-                          color: Colors.black,
-                        ),            ),
+                                  fontWeight: FontWeight.w200,
+                                  color: Colors.black,
+                                ),
+                      ),
                     ),
                     const AreaInfoText(
                       title: "ARABIC",

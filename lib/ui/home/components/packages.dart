@@ -17,7 +17,8 @@ class Packages extends StatelessWidget {
         children: [
           Text(
             "Flutter Packages",
-            style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: defaultPadding),
           SingleChildScrollView(
@@ -39,4 +40,3 @@ class Packages extends StatelessWidget {
     );
   }
 }
-

@@ -5,4 +5,3 @@ class Source {
 
   Source({required this.name, this.link1, this.link2, this.link3});
 }
-

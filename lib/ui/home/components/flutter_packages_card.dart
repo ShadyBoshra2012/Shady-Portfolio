@@ -24,7 +24,8 @@ class FlutterPackagesCard extends StatelessWidget {
           children: [
             Text(
               packages.tiltle!,
-              style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
             Text(packages.date!),
             const SizedBox(height: defaultPadding),
@@ -32,13 +33,19 @@ class FlutterPackagesCard extends StatelessWidget {
               packages.body!,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(height: 1.5, color: Colors.black45,),
+              style: TextStyle(
+                height: 1.5,
+                color: Colors.black45,
+              ),
             ),
             Text(
               packages.link!,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(height: 1.5, color: Colors.black45,),
+              style: TextStyle(
+                height: 1.5,
+                color: Colors.black45,
+              ),
             )
           ],
         ),
