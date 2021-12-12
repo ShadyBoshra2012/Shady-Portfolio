@@ -21,8 +21,7 @@ class MyApp extends StatelessWidget {
       )..add(LoadWorkExperience()),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Portfolio',
-        // we are using dark theme and we modify it as our need
+        title: 'Shady Portfolio',
         theme: ThemeData.light().copyWith(
           primaryColor: primaryColor,
           scaffoldBackgroundColor: bgColor,

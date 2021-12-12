@@ -13,7 +13,7 @@ class Education extends StatelessWidget {
       aspectRatio: 1.23,
       child: Card(
         elevation: 8,
-        color: secondaryColor,
+        color: bgColor,
         child: Column(
           children: [
             Spacer(flex: 1),
@@ -46,7 +46,7 @@ class Education extends StatelessWidget {
                         color: Colors.black,
                       ),
             ),
-            Text(
+            const Text(
               "B.A. in Information Technology\nGPA: 3.32\nGraduated 2020 ",
               textAlign: TextAlign.center,
               style: TextStyle(

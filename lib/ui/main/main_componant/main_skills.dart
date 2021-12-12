@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_progress_indicator.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/ui/main/main_componant/environments.dart';
 import 'package:portfolio/ui/main/main_componant/front_end.dart';
+import 'package:portfolio/ui/main/main_componant/scoial_btns.dart';
 import 'package:portfolio/ui/main/main_componant/works_ex.dart';
 
 class MainSkills extends StatelessWidget {
@@ -10,6 +12,7 @@ class MainSkills extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  // in this class work experience, environments
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,16 +23,17 @@ class MainSkills extends StatelessWidget {
           Row(
             // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             children: [
+              // this is title of work experience and gift
               Container(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: Icon(
-                    Icons.accessibility_new,
-                    size: Responsive.isDesktop(context) ? 60 : 35,
-                  )),
+                  child: buildSocialButton(
+                    image: "gifts/facebook.gif",
+                  )
+              ),
               Text(
-                "WORK EXPERIENCE",
+                "  WORK EXPERIENCE",
                 style: Responsive.isDesktop(context)
-                    ? Theme.of(context).textTheme.headline3!.copyWith(
+                    ? Theme.of(context).textTheme.headline5!.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Color(0xffd5bc35),
                         )
@@ -40,9 +44,12 @@ class MainSkills extends StatelessWidget {
               ),
             ],
           ),
+          // work experience
           Works_EX(),
+          // title of skills and change front size when be mobile or tablet
           Row(
             children: [
+              if(Responsive.isDesktop(context))
               Expanded(
                 flex: 5,
                 child: Padding(
@@ -50,31 +57,26 @@ class MainSkills extends StatelessWidget {
                   child: Column(
                     children: [
                       Center(
-                        child: Row(
-                          // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-                          children: [
-                            Text(
-                              "Skills",
-                              textAlign: TextAlign.center,
-                              style: Responsive.isDesktop(context)
-                                  ? Theme.of(context)
-                                      .textTheme
-                                      .headline4!
-                                      .copyWith(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 180,
-                                        color: Color(0xffd5bc35),
-                                      )
-                                  : Theme.of(context)
-                                      .textTheme
-                                      .headline5!
-                                      .copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 55,
-                                        color: Color(0xffd5bc35),
-                                      ),
-                            ),
-                          ],
+                        child:  Text(
+                          "Skills",
+                          textAlign: TextAlign.center,
+                          style: Responsive.isDesktop(context)
+                              ? Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 180,
+                            color: Color(0xffd5bc35),
+                          )
+                              : Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 55,
+                            color: Color(0xffd5bc35),
+                          ),
                         ),
                       ),
                       Image.asset(
@@ -84,92 +86,7 @@ class MainSkills extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                flex: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 18.0, 0, 30.0),
-                        child: Text(
-                          "Environments",
-                          style: Responsive.isDesktop(context)
-                              ? Theme.of(context).textTheme.headline4!.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  )
-                              : Theme.of(context).textTheme.headline5!.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                        ),
-                      ),
-                      Padding(
-                        padding: Responsive.isDesktop(context) &&
-                                Responsive.isTablet(context)
-                            ? EdgeInsets.fromLTRB(70.0, 0.0, 70.0, 0.0)
-                            : EdgeInsets.all(18),
-                        child: Row(
-                          children: const [
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.9,
-                                label: "Flutter",
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding),
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.75,
-                                label: "Android",
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding),
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.55,
-                                label: "IOS",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: Responsive.isDesktop(context) &&
-                                Responsive.isTablet(context)
-                            ? EdgeInsets.fromLTRB(70.0, 0.0, 70.0, 0.0)
-                            : EdgeInsets.all(18),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.55,
-                                label: "Web",
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding),
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.75,
-                                label: "WPF",
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding),
-                            Expanded(
-                              child: AnimatedCircularProgressIndicator(
-                                percentage: 0.75,
-                                label: "Git",
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      FrontEnd(),
-                    ],
-                  ),
-                ),
-              ),
+              Environments(),
             ],
           ),
         ],

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-
-import '../../../../constants.dart';
 
 class FrontEnd extends StatelessWidget {
   const FrontEnd({
@@ -33,7 +31,8 @@ class FrontEnd extends StatelessWidget {
             ),
           ),
           FrontEndText(text: "ReactJS"),
-          FrontEndText(text: "HTML - CSS - Bootstrap"),
+          FrontEndText(text: "HTML - CSS"),
+          FrontEndText(text: "Bootstrap"),
           FrontEndText(text: "jQuery"),
           FrontEndText(text: "XML"),
         ],
@@ -42,6 +41,7 @@ class FrontEnd extends StatelessWidget {
   }
 }
 
+// style of text in frontend data and start with icon check
 class FrontEndText extends StatelessWidget {
   const FrontEndText({
     Key? key,

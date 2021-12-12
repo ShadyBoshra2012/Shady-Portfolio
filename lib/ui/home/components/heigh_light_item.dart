@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'package:portfolio/constants.dart';
+
+// style of text in highlights
+class HeighLight extends StatelessWidget {
+  const HeighLight({
+    Key? key,
+    required this.counter,
+    this.label,
+  }) : super(key: key);
+
+  final Widget counter;
+  final String? label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        counter,
+        SizedBox(width: defaultPadding / 2),
+        Text(label!, style: TextStyle(color: Colors.yellow)),
+
+      ],
+    );
+  }
+}

@@ -31,7 +31,7 @@ dependencies:
     sdk: flutter
 
   #Use with the CupertinoIcons class for iOS style icons.
-#  cupertino_icons: ^1.0.2
+  #  cupertino_icons: ^1.0.2
   google_fonts: ^2.1.0
   flutter_svg: ^0.22.0
   animated_text_kit: ^4.2.1
@@ -70,17 +70,16 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-#  fonts:
-#    - family: RobotoMono
-#      fonts:
-#        - asset: fonts/RobotoMono-Regular.ttf
-#        - asset: fonts/RobotoMono-Bold.ttf
-#          weight: 700
-    # To add assets to your application, add an assets section, like this:
+    #  fonts:
+    #    - family: RobotoMono
+    #      fonts:
+    #        - asset: fonts/RobotoMono-Regular.ttf
+    #        - asset: fonts/RobotoMono-Bold.ttf
+    #          weight: 700
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/
     - assets/images/
-    - assets/fonts/
     - assets/gifts/
 
 
@@ -95,10 +94,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+#  fonts:
+#   - family: myfont
+#     fonts:
+#        - asset: fonts/AbrilFatface.ttf
+#        - asset: fonts/RobotoMono-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

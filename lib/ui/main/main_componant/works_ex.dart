@@ -11,12 +11,15 @@ class Works_EX extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        FullTime(),
-        PartTime(),
-        Divider(),
-      ],
+    return Container(
+      // color: Colors.yellowAccent,
+      child: Column(
+        children: [
+          FullTime(),
+          PartTime(),
+          Divider(),
+        ],
+      ),
     );
   }
 }

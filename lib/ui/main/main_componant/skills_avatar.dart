@@ -3,6 +3,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive.dart';
 
+// avatar circle
 class SkillsAvatar extends StatelessWidget {
   const SkillsAvatar({
     Key? key,
@@ -11,7 +12,7 @@ class SkillsAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10.0),
       child: AvatarGlow(
         startDelay: Duration(milliseconds: 1000),
         glowColor: Colors.black12,

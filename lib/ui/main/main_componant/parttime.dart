@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 
+// changed size of text
 class PartTime extends StatelessWidget {
   const PartTime({
     Key? key,
@@ -14,20 +15,20 @@ class PartTime extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(70, 30, 0, 0),
+            padding: const EdgeInsets.all(20.0),
             child: Text(
               "Part Time",
               style: Responsive.isDesktop(context)
                   ? Theme.of(context).textTheme.subtitle2!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        color: Colors.black,
-                      )
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Colors.black,
+              )
                   : Theme.of(context).textTheme.subtitle2!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        color: Colors.black,
-                      ),
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                color: Colors.black,
+              ),
             ),
           ),
         ),

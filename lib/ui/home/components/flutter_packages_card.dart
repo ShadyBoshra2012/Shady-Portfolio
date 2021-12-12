@@ -18,14 +18,14 @@ class FlutterPackagesCard extends StatelessWidget {
       child: Container(
         width: 400,
         padding: EdgeInsets.all(defaultPadding),
-        color: secondaryColor,
+        color: cardPackageColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               packages.tiltle!,
               style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                  const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
             Text(packages.date!),
             const SizedBox(height: defaultPadding),

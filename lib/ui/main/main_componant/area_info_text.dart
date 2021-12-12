@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../constants.dart';
 
+//to set data of personal information and  speaking languages in drawer side menu
 class AreaInfoText extends StatelessWidget {
   const AreaInfoText({
     Key? key,
