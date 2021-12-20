@@ -1,22 +1,10 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/data/models/Work_experience.dart';
-import 'package:portfolio/data/repository/my_repository.dart';
-import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/hover_icon_btn_widget.dart';
-import 'package:portfolio/ui/home/components/hover_text_widget.dart';
-import 'package:portfolio/ui/home/components/my_projects.dart';
+import 'package:portfolio/ui/home/components/banner_components/hover_icon_btn_widget.dart';
 import 'package:portfolio/ui/main/main_componant/area_info_text.dart';
-import 'package:portfolio/ui/main/main_componant/front_end.dart';
-import 'package:portfolio/ui/main/main_componant/languages.dart';
-
-import 'education.dart';
 
 // drawer menu
 class LineMenu extends StatelessWidget {

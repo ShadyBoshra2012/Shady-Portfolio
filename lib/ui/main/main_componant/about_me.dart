@@ -7,8 +7,8 @@ import 'package:portfolio/ui/main/main_componant/front_end.dart';
 import 'package:portfolio/ui/main/main_componant/scoial_btns.dart';
 import 'package:portfolio/ui/main/main_componant/works_ex.dart';
 
-class MainSkills extends StatelessWidget {
-  const MainSkills({
+class AboutMe extends StatelessWidget {
+  const AboutMe({
     Key? key,
   }) : super(key: key);
 
@@ -20,30 +20,19 @@ class MainSkills extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            // padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-            children: [
-              // this is title of work experience and gift
-              Container(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: buildSocialButton(
-                    image: "gifts/facebook.gif",
-                  )
-              ),
-              Text(
-                "  WORK EXPERIENCE",
-                style: Responsive.isDesktop(context)
-                    ? Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xffd5bc35),
-                        )
-                    : Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xffd5bc35),
-                        ),
-              ),
-            ],
+          Text(
+            "ABOUT ME",
+            style: Responsive.isDesktop(context)
+                ? Theme.of(context).textTheme.headline4!.copyWith(
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            )
+                : Theme.of(context).textTheme.headline6!.copyWith(
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
+          const Icon(Icons.linear_scale, color: primaryColor,),
           // work experience
           Works_EX(),
           // title of skills and change front size when be mobile or tablet

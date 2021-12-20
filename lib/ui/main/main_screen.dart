@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/hover_text_widget.dart';
+import 'package:portfolio/ui/home/components/banner_components/hover_text_widget.dart';
 import 'package:portfolio/ui/main/main_componant/line_menu.dart';
 import 'package:portfolio/ui/main/main_componant/scoial_btns.dart';
 import 'package:portfolio/ui/main/main_componant/skills_avatar.dart';
