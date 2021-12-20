@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 
-class HoverText extends StatefulWidget {
+class HoverIconButton extends StatefulWidget {
 
+  final IconData iconText;
   final String text;
   final void Function()? onTap;
-  
-  HoverText({required this.text, required this.onTap });
+  HoverIconButton({required this.text, required this.onTap ,required this.iconText,});
 
   @override
-  _HoverTextState createState() => _HoverTextState();
+  _HoverIconButtonState createState() => _HoverIconButtonState();
 }
 
 // style to text when be on text be gray and be white when clicked
-class _HoverTextState extends State<HoverText> {
+class _HoverIconButtonState extends State<HoverIconButton> {
 
   Color textColor= Colors.black;
   int _enterCounter=0;
   int _exitCounter=0;
   double x=0.0;
   double y=0.0;
+
 
 
  void _incrementEnter(PointerEvent details){
@@ -52,11 +55,16 @@ class _HoverTextState extends State<HoverText> {
       onHover:_updateLocation ,
       onExit:_incrementExit ,
       child: GestureDetector(
-        onTap: widget.onTap,
-        child: Text(widget.text,style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: textColor,
-        ),),
+        child: Column(
+          children: [
+            Icon(widget.iconText,color: textColor),
+            const SizedBox(height: defaultPadding/3),
+            Text(widget.text,style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: textColor,
+            ),),
+          ],
+        ),
       ),
     );
   }

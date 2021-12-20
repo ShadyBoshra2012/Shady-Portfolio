@@ -18,70 +18,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       // We change the appbar on desktop
       appBar: Responsive.isDesktop(context)
-          ? AppBar(
-        backgroundColor: Colors.yellow,
-        title: DefaultTextStyle(
-          style: const TextStyle(fontSize: 35, color: Colors.white, shadows: [
-            BoxShadow(
-              blurRadius: 7.0,
-              color: Colors.white,
-              offset: Offset(0, 0),
-            )
-          ]),
-          child: AnimatedTextKit(
-            repeatForever: true,
-            animatedTexts: [
-              FlickerAnimatedText(
-                "Shady Boshra",
-                textStyle: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
-              )
-            ],
-            onTap: () {
-              print("onTap");
-            },
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 40.0),
-            child: Row(
-              children: [
-                HoverText(
-                  onTap: () {},
-                  text: "ABOUT",
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                HoverText(
-                  onTap: () {},
-                  text: "EXPERIENCES",
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                HoverText(
-                  onTap: () {},
-                  text: "ENVIRONMENTS",
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                HoverText(
-                  onTap: () {},
-                  text: "CONTACT",
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-              ],
-            ),
-          )
-        ],
-      )
+          ? null
           : AppBar(
               backgroundColor: bgColor,
               leading: Builder(
@@ -96,7 +33,7 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
             ),
-      drawer: SideMenu(),
+      drawer: LineMenu(),
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxWidth: maxWidth),
@@ -105,12 +42,12 @@ class MainScreen extends StatelessWidget {
             children: [
               if (Responsive.isDesktop(context))
                 Expanded(
-                  flex: 2,
-                  child: SideMenu(),
+                  flex: 1,
+                  child: LineMenu(),
                 ),
               SizedBox(width: defaultPadding),
               Expanded(
-                flex: 7,
+                flex: 8,
                 child:
                 SingleChildScrollView(
                   child: Column(
