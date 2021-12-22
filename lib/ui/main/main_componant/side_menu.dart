@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/ui/home/components/about_me/components/education.dart';
 import 'package:portfolio/ui/main/main_componant/area_info_text.dart';
-import 'education.dart';
 
 // change the side color
 class SideMenu extends StatelessWidget {

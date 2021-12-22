@@ -78,6 +78,7 @@ class MyProjects extends StatelessWidget {
           mobileLarge: ProjectsGridView(crossAxisCount: 2),
           tablet: ProjectsGridView(childAspectRatio: 1.1),
           desktop: ProjectsGridView(),
+          laptop: ProjectsGridView(),
         )
       ],
     );

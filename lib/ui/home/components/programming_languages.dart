@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_progress_indicator.dart';
+import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 
-import '../../../constants.dart';
-
-class Languages extends StatelessWidget {
-  const Languages({
+class ProgrammingLanguages extends StatelessWidget {
+  const ProgrammingLanguages({
     Key? key,
   }) : super(key: key);
 
@@ -32,27 +31,27 @@ class Languages extends StatelessWidget {
                       ),
             ),
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.95,
             label: "Dart",
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.75,
             label: "C#",
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.75,
             label: "Java",
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.75,
             label: "JS/node.js",
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.55,
             label: "PHP",
           ),
-          AnimatedLinearProgressIndicator(
+          const AnimatedLinearProgressIndicator(
             percentage: 0.55,
             label: "C++",
           ),

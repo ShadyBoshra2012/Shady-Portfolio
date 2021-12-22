@@ -11,11 +11,12 @@ class FullTime extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Align(
           alignment: Alignment.centerLeft,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.fromLTRB(25,15,0,10),
             child: Text(
               "Full Time",
               style: Responsive.isDesktop(context)
@@ -35,26 +36,28 @@ class FullTime extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Padding(
-            padding: const EdgeInsets.only(left: 85.0),
+            padding: const EdgeInsets.only(left: 25.0),
             child: Text(
               "GrandTK - Flutter Developer Position - May 2020 to Nov 2020",
               style: Responsive.isDesktop(context)
                   ? Theme.of(context).textTheme.headline3!.copyWith(
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 12,
                         color: Colors.black54,
                       )
                   : Theme.of(context).textTheme.headline5!.copyWith(
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 10,
                         color: Colors.black54,
                       ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 100.0),
+          padding: const EdgeInsets.only(left: 35.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 4.0),
@@ -74,6 +77,7 @@ class FullTime extends StatelessWidget {
                         height: 1.5,
                         color: Color(0xFF726F6F),
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -96,6 +100,7 @@ class FullTime extends StatelessWidget {
                         height: 1.5,
                         color: Color(0xFF726F6F),
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -111,13 +116,14 @@ class FullTime extends StatelessWidget {
                           Icons.circle,
                           size: Responsive.isDesktop(context) ? 10 : 8,
                         )),
-                    Text(
+                    const Text(
                       "Buildings (Aqarat), Sale and Rent",
                       style: TextStyle(
                         fontWeight: FontWeight.w100,
                         height: 1.5,
                         color: Color(0xFF726F6F),
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),

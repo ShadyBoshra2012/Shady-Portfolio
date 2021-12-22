@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/ui/home/components/banner_components/hover_icon_btn_widget.dart';
+import 'package:portfolio/ui/home/components/banner_components/components/hover_icon_btn_widget.dart';
 import 'package:portfolio/ui/main/main_componant/area_info_text.dart';
 
 // drawer menu

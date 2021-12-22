@@ -23,90 +23,93 @@ class HomeBanner extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Hello there...",
-                                  style: Responsive.isDesktop(context)
-                                      ? Theme.of(context)
-                                          .textTheme
-                                          .headline3!
-                                          .copyWith(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 20,
-                                            color: Colors.black,
-                                          )
-                                      : Theme.of(context)
-                                          .textTheme
-                                          .headline5!
-                                          .copyWith(
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xff898888),
-                                          ),
-                                ),
-                                Text(
-                                  "Shady Boshra",
-                                  style: Responsive.isDesktop(context)
-                                      ? Theme.of(context)
-                                          .textTheme
-                                          .headline3!
-                                          .copyWith(
-                                            fontSize: 50,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black,
-                                          )
-                                      : Theme.of(context)
-                                          .textTheme
-                                          .headline5!
-                                          .copyWith(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black,
-                                          ),
-                                ),
-                                MyBuildAnimatedText(),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 20.0),
-                                  child: Row(children: [
-                                    ElevatedButton(
-                                      onPressed: () {},
-                                      style: TextButton.styleFrom(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: defaultPadding * 2,
-                                            vertical: defaultPadding),
-                                        backgroundColor: primaryColor,
+                            Padding(
+                              padding: const EdgeInsets.all(80.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Hello there...",
+                                    style: Responsive.isDesktop(context)
+                                        ? Theme.of(context)
+                                            .textTheme
+                                            .headline3!
+                                            .copyWith(
+                                              fontWeight: FontWeight.normal,
+                                              fontSize: 20,
+                                              color: Colors.black,
+                                            )
+                                        : Theme.of(context)
+                                            .textTheme
+                                            .headline5!
+                                            .copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xff898888),
+                                            ),
+                                  ),
+                                  Text(
+                                    "Shady Boshra",
+                                    style: Responsive.isDesktop(context)
+                                        ? Theme.of(context)
+                                            .textTheme
+                                            .headline3!
+                                            .copyWith(
+                                              fontSize: 50,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                            )
+                                        : Theme.of(context)
+                                            .textTheme
+                                            .headline5!
+                                            .copyWith(
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                            ),
+                                  ),
+                                  MyBuildAnimatedText(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20.0),
+                                    child: Row(children: [
+                                      ElevatedButton(
+                                        onPressed: () {},
+                                        style: TextButton.styleFrom(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: defaultPadding * 2,
+                                              vertical: defaultPadding),
+                                          backgroundColor: primaryColor,
+                                        ),
+                                        child: Text(
+                                          "MY WORK",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                       ),
-                                      child: Text(
-                                        "MY WORK",
-                                        style: TextStyle(color: Colors.white),
+                                      SizedBox(width: defaultPadding),
+                                      OutlinedButton(
+                                        onPressed: () {},
+                                        style: OutlinedButton.styleFrom(
+                                          side: BorderSide(
+                                              width: 1.0, color: primaryColor),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: defaultPadding,
+                                              vertical: defaultPadding),
+                                        ),
+                                        child: const Text(
+                                          "HIRE ME",
+                                          style: TextStyle(color: primaryColor),
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(width: defaultPadding),
-                                    OutlinedButton(
-                                      onPressed: () {},
-                                      style: OutlinedButton.styleFrom(
-                                        side: BorderSide(
-                                            width: 1.0, color: primaryColor),
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: defaultPadding,
-                                            vertical: defaultPadding),
-                                      ),
-                                      child: const Text(
-                                        "HIRE ME",
-                                        style: TextStyle(color: primaryColor),
-                                      ),
-                                    ),
-                                  ]),
-                                ),
-                              ],
+                                    ]),
+                                  ),
+                                ],
+                              ),
                             ),
                             Spacer(),
                             Image.asset(
                               'assets/images/shady.jpg',
-                              width: 250.0,
-                              height: 350.0,
+                              width: 500.0,
+                              height: 1000.0,
                               fit: BoxFit.cover,
                             ),
                           ],
@@ -114,7 +117,7 @@ class HomeBanner extends StatelessWidget {
                       : Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(18.0),
+                              padding: const EdgeInsets.all(150.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -198,8 +201,8 @@ class HomeBanner extends StatelessWidget {
                             Spacer(),
                             Image.asset(
                               'assets/images/shady.jpg',
-                              width: 400.0,
-                              height: 600.0,
+                              width: 600.0,
+                              height: 780.0,
                               fit: BoxFit.cover,
                             ),
                           ],
@@ -308,83 +311,86 @@ class HomeBanner extends StatelessWidget {
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Hello there...",
-                            style: Responsive.isDesktop(context)
-                                ? Theme.of(context)
-                                    .textTheme
-                                    .headline3!
-                                    .copyWith(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 20,
-                                      color: Colors.black,
-                                    )
-                                : Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xff898888),
-                                    ),
-                          ),
-                          Text(
-                            "Shady Boshra",
-                            style: Responsive.isDesktop(context)
-                                ? Theme.of(context)
-                                    .textTheme
-                                    .headline3!
-                                    .copyWith(
-                                      fontSize: 50,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                    )
-                                : Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                    ),
-                          ),
-                          MyBuildAnimatedText(),
-                          // MyBuildAnimatedText(),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 20.0),
-                            child: Row(children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: defaultPadding * 2,
-                                      vertical: defaultPadding),
-                                  backgroundColor: primaryColor,
+                      Padding(
+                        padding: const EdgeInsets.all(50.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              "Hello there...",
+                              style: Responsive.isDesktop(context)
+                                  ? Theme.of(context)
+                                      .textTheme
+                                      .headline3!
+                                      .copyWith(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      )
+                                  : Theme.of(context)
+                                      .textTheme
+                                      .headline5!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xff898888),
+                                      ),
+                            ),
+                            Text(
+                              "Shady Boshra",
+                              style: Responsive.isDesktop(context)
+                                  ? Theme.of(context)
+                                      .textTheme
+                                      .headline3!
+                                      .copyWith(
+                                        fontSize: 50,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                      )
+                                  : Theme.of(context)
+                                      .textTheme
+                                      .headline5!
+                                      .copyWith(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                      ),
+                            ),
+                            MyBuildAnimatedText(),
+                            // MyBuildAnimatedText(),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20.0),
+                              child: Row(children: [
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: TextButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: defaultPadding * 2,
+                                        vertical: defaultPadding),
+                                    backgroundColor: primaryColor,
+                                  ),
+                                  child: const Text(
+                                    "MY WORK",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                 ),
-                                child: const Text(
-                                  "MY WORK",
-                                  style: TextStyle(color: Colors.white),
+                                SizedBox(width: defaultPadding),
+                                OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    side: BorderSide(
+                                        width: 1.0, color: primaryColor),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: defaultPadding,
+                                        vertical: defaultPadding),
+                                  ),
+                                  child: const Text(
+                                    "HIRE ME",
+                                    style: TextStyle(color: primaryColor),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: defaultPadding),
-                              OutlinedButton(
-                                onPressed: () {},
-                                style: OutlinedButton.styleFrom(
-                                  side: BorderSide(
-                                      width: 1.0, color: primaryColor),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: defaultPadding,
-                                      vertical: defaultPadding),
-                                ),
-                                child: const Text(
-                                  "HIRE ME",
-                                  style: TextStyle(color: primaryColor),
-                                ),
-                              ),
-                            ]),
-                          ),
-                        ],
+                              ]),
+                            ),
+                          ],
+                        ),
                       ),
                       Spacer(),
                       Image.asset(

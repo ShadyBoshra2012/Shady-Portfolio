@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants.dart';
@@ -16,15 +17,24 @@ class AreaInfoText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            title!,
-            style: TextStyle(color: Colors.black45),
-          ),
-          Text(text!),
-        ],
+      child: IntrinsicHeight(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title!,
+              style: TextStyle(color: Colors.black45),
+            ),
+            const SizedBox(width:defaultPadding),
+            const VerticalDivider(
+              thickness: 1,
+              width: 10,
+              color: Colors.black,
+            ),
+            const SizedBox(width:defaultPadding),
+            Text(text!),
+          ],
+        ),
       ),
     );
   }

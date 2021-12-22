@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_progress_indicator.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/main/main_componant/front_end.dart';
+import 'package:portfolio/ui/home/components/front_end.dart';
 
 import '../../../constants.dart';
 
