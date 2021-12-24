@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/about_me/components/human_languages.dart';
-import 'package:portfolio/ui/home/components/environments.dart';
 import 'package:portfolio/ui/home/components/about_me/components/info.dart';
-import 'package:portfolio/ui/home/components/my_work_ex/works_ex.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({

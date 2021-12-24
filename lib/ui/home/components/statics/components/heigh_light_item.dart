@@ -18,7 +18,7 @@ class HeighLight extends StatelessWidget {
       children: [
         counter,
         SizedBox(width: defaultPadding / 2),
-        Text(label!, style: TextStyle(color: Colors.yellow)),
+        Text(label!, style: TextStyle(color: Colors.black)),
 
       ],
     );

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_progress_indicator.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/front_end.dart';
 
-import '../../../constants.dart';
+import '../../../../constants.dart';
 
-// in this class body of environment and frontend()
 class Environments extends StatelessWidget {
   const Environments({
     Key? key,
@@ -94,7 +92,6 @@ class Environments extends StatelessWidget {
                 ],
               ),
             ),
-            FrontEnd(),
           ],
         ),
       ),

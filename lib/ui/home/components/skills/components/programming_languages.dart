@@ -15,7 +15,6 @@ class ProgrammingLanguages extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Divider(),
           Padding(
             padding: EdgeInsets.symmetric(vertical: defaultPadding),
             child: Text(

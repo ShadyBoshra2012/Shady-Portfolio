@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_counter.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/heigh_light_item.dart';
+import 'package:portfolio/ui/home/components/statics/components/heigh_light_item.dart';
 
 class HighLightsInfo extends StatelessWidget {
   const HighLightsInfo({

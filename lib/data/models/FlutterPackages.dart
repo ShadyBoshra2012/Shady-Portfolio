@@ -5,14 +5,14 @@ class FlutterPackages {
 
 final List<FlutterPackages> flutter_packages = [
   FlutterPackages(
-    tiltle: "xxxx",
+    tiltle: "xxxxxxxxxxxxxxxxx",
     date: "Jun 2020",
     body:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     link: "xxxxxxxxxxxxxxxxxxx",
   ),
   FlutterPackages(
-    tiltle: "xxxx",
+    tiltle: "xxxxxxxxxxxx",
     date: "Jun 2020",
     body:
         "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",

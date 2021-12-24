@@ -69,31 +69,4 @@ List<Project> demo_projects = [
     projectType: 4,
     source: Source(name: 'website', link1: "link website"),
   ),
-  Project(
-    title: "project name6",
-    image: "",
-    description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    date: "23 JUN 2021",
-    projectType: 1,
-    source: Source(name: 'flutter', link1: "link android"),
-  ),
-  Project(
-    title: "project name7",
-    image: "",
-    description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    date: "23 JUN 2021",
-    projectType: 1,
-    source: Source(name: 'flutter', link1: "link android"),
-  ),
-  Project(
-    title: "project name8",
-    image: "",
-    description:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    date: "23 JUN 2021",
-    projectType: 1,
-    source: Source(name: 'flutter', link1: "link android"),
-  ),
 ];

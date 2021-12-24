@@ -16,6 +16,7 @@ class HomeBanner extends StatelessWidget {
       children: [
         Responsive.isDesktop(context)
             ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Responsive.isTablet(context)
@@ -45,7 +46,7 @@ class HomeBanner extends StatelessWidget {
                                             .headline5!
                                             .copyWith(
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xff898888),
+                                              color: Colors.black,
                                             ),
                                   ),
                                   Text(
@@ -75,12 +76,12 @@ class HomeBanner extends StatelessWidget {
                                       ElevatedButton(
                                         onPressed: () {},
                                         style: TextButton.styleFrom(
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: defaultPadding * 2,
                                               vertical: defaultPadding),
                                           backgroundColor: primaryColor,
                                         ),
-                                        child: Text(
+                                        child: const Text(
                                           "MY WORK",
                                           style: TextStyle(color: Colors.white),
                                         ),
@@ -89,7 +90,7 @@ class HomeBanner extends StatelessWidget {
                                       OutlinedButton(
                                         onPressed: () {},
                                         style: OutlinedButton.styleFrom(
-                                          side: BorderSide(
+                                          side: const BorderSide(
                                               width: 1.0, color: primaryColor),
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: defaultPadding,
@@ -309,11 +310,14 @@ class HomeBanner extends StatelessWidget {
                     ],
                   )
                 : Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(50.0),
+                        padding: const EdgeInsets.fromLTRB(60.0,200,0,0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
                               "Hello there...",
@@ -330,8 +334,8 @@ class HomeBanner extends StatelessWidget {
                                       .textTheme
                                       .headline5!
                                       .copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: Color(0xff898888),
+                                       fontSize: 16,
+                                        color: Colors.black,
                                       ),
                             ),
                             Text(
@@ -347,9 +351,9 @@ class HomeBanner extends StatelessWidget {
                                       )
                                   : Theme.of(context)
                                       .textTheme
-                                      .headline5!
+                                      .headline6!
                                       .copyWith(
-                                        fontSize: 30,
+                                        fontSize: 35,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
                                       ),
@@ -421,7 +425,6 @@ class MyBuildAnimatedText extends StatelessWidget {
         children: [
           // if (!Responsive.isMobileLarge(context)),
           if (!Responsive.isMobileLarge(context))
-            SizedBox(width: defaultPadding / 2),
           Text("I am ", style: TextStyle(color: Colors.black)),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())

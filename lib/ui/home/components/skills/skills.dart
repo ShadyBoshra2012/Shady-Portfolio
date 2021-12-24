@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/home/components/about_me/components/human_languages.dart';
-import 'package:portfolio/ui/home/components/environments.dart';
+import 'package:portfolio/ui/home/components/test/environments.dart';
 import 'package:portfolio/ui/home/components/about_me/components/info.dart';
-import 'package:portfolio/ui/home/components/programming_languages.dart';
+import 'package:portfolio/ui/home/components/skills/components/front_end.dart';
+import 'package:portfolio/ui/home/components/skills/components/programming_languages.dart';
+import 'package:portfolio/ui/home/components/skills/components/environments2.dart';
 
 class Skills extends StatelessWidget {
   const Skills({
@@ -16,7 +18,7 @@ class Skills extends StatelessWidget {
   Widget build(BuildContext context) {
     // title of skills and change front size when be mobile or tablet
     return Container(
-        color: Colors.white,
+        color: secondaryColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -31,14 +33,14 @@ class Skills extends StatelessWidget {
                   Text(
                     "MY SKILLS",
                     style: Responsive.isDesktop(context)
-                        ? Theme.of(context).textTheme.headline2!.copyWith(
+                        ? Theme.of(context).textTheme.headline6!.copyWith(
                               fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                              fontSize: 30,
                               color: Colors.black,
                             )
                         : Theme.of(context).textTheme.subtitle2!.copyWith(
                               fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                              fontSize: 30,
                               color: Colors.black,
                             ),
                   ),
@@ -46,10 +48,24 @@ class Skills extends StatelessWidget {
                     Icons.linear_scale,
                     color: primaryColor,
                   ),
+                  Text(
+                    "Working hard is the best way ",
+                    style: Responsive.isDesktop(context)
+                        ? Theme.of(context).textTheme.headline1!.copyWith(
+                      fontSize: 20,
+                      color: Colors.black,
+                    )
+                        : Theme.of(context).textTheme.subtitle1!.copyWith(
+                      fontSize: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+
                 ],
               ),
             ),
             ProgrammingLanguages(),
+            Environments2(),
           ],
         ));
   }

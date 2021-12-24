@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
       drawer: LineMenu(),
       body: Center(
         child: Container(
-          constraints: BoxConstraints(maxWidth: maxWidth),
+          // constraints: BoxConstraints(maxWidth: maxWidth),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
