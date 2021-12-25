@@ -248,7 +248,7 @@ class HomeBanner extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(0, 120, 30, 0),
                         color: Colors.white70,
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 30, 8, 30),
+                          padding: const EdgeInsets.fromLTRB(22, 30, 8, 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
