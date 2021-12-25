@@ -29,8 +29,13 @@ class Info extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 45,
                 color: Colors.black,
+              ) :Responsive.isMobileLarge(context)?
+              Theme.of(context).textTheme.headline6!.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                color: Colors.black,
               )
-                  : Theme.of(context).textTheme.headline6!.copyWith(
+              :Theme.of(context).textTheme.headline6!.copyWith(
                 fontWeight: FontWeight.bold,
                 fontSize: 45,
                 color: Colors.black,
@@ -47,7 +52,12 @@ class Info extends StatelessWidget {
                     fontSize: 20,
                     color: Colors.black,
                   )
-                      : Theme.of(context).textTheme.headline6!.copyWith(
+                      : Responsive.isMobileLarge(context)?
+                      Theme.of(context).textTheme.headline6!.copyWith(
+                        fontSize: 14,
+                        color: Colors.black,
+                      )
+                      :Theme.of(context).textTheme.headline6!.copyWith(
                     fontSize: 20,
                     color: Colors.black,
                   ),
@@ -59,10 +69,15 @@ class Info extends StatelessWidget {
                     fontSize: 20,
                     color: primaryColor,
                   )
-                      : Theme.of(context).textTheme.headline6!.copyWith(
-                    fontSize: 20,
-                    color: primaryColor,
-                  ),
+                      : Responsive.isMobileLarge(context)?
+                Theme.of(context).textTheme.headline6!.copyWith(
+                  fontSize: 14,
+                  color: primaryColor,
+                )
+                    :Theme.of(context).textTheme.headline6!.copyWith(
+                  fontSize: 20,
+                  color: primaryColor,
+                ),
                 ),
                 Text(
                   "developer",
@@ -71,10 +86,15 @@ class Info extends StatelessWidget {
                     fontSize: 20,
                     color: Colors.black,
                   )
-                      : Theme.of(context).textTheme.headline6!.copyWith(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
+                      : Responsive.isMobileLarge(context)?
+                Theme.of(context).textTheme.headline6!.copyWith(
+                  fontSize: 14,
+                  color: Colors.black,
+                )
+                    :Theme.of(context).textTheme.headline6!.copyWith(
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
                 ),
               ],
             ),
