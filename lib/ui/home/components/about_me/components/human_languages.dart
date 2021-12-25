@@ -67,22 +67,22 @@ class HumanLanguages extends StatelessWidget {
                 style: Responsive.isDesktop(context)
                     ? Theme.of(context).textTheme.headline4!.copyWith(
                   fontSize: 13,
-                  color: Colors.grey,
+                  color: Colors.black54,
                 )
                     : Theme.of(context).textTheme.headline6!.copyWith(
                   fontSize: 10,
-                  color: Colors.grey,
+                  color: Colors.black54,
                 ),
               ),
               Text("|        INTERMEDIATE",
                 style: Responsive.isDesktop(context)
                     ? Theme.of(context).textTheme.headline4!.copyWith(
                   fontSize: 13,
-                  color: Colors.grey,
+                  color: Colors.black54,
                 )
                     : Theme.of(context).textTheme.headline6!.copyWith(
                   fontSize: 10,
-                  color: Colors.grey,
+                  color: Colors.black54,
                 ),
               ),
             ],

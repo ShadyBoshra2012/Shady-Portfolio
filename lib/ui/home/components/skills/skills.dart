@@ -52,10 +52,12 @@ class Skills extends StatelessWidget {
                     "Working hard is the best way ",
                     style: Responsive.isDesktop(context)
                         ? Theme.of(context).textTheme.headline1!.copyWith(
+                      fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: Colors.black,
                     )
                         : Theme.of(context).textTheme.subtitle1!.copyWith(
+                      fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: Colors.black,
                     ),

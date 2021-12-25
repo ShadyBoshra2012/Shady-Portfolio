@@ -94,7 +94,7 @@ class PersonalInformation extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: defaultPadding / 2),
+                            const SizedBox(height: defaultPadding / 2),
                           ],
                         ),
                         const SizedBox(width:defaultPadding*2),
@@ -108,11 +108,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -122,11 +122,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -136,11 +136,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -150,11 +150,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -240,11 +240,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -254,11 +254,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -268,11 +268,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -282,11 +282,11 @@ class PersonalInformation extends StatelessWidget {
                                 style: Responsive.isDesktop(context)
                                     ? Theme.of(context).textTheme.headline4!.copyWith(
                                   fontSize: 13,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 )
                                     : Theme.of(context).textTheme.headline6!.copyWith(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -375,11 +375,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -389,11 +389,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -403,11 +403,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -425,7 +425,7 @@ class PersonalInformation extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: defaultPadding / 2),
+                          const SizedBox(height: defaultPadding / 2),
                         ],
                       ),
                     ],
@@ -507,11 +507,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -521,11 +521,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -535,11 +535,11 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -549,15 +549,15 @@ class PersonalInformation extends StatelessWidget {
                               style: Responsive.isDesktop(context)
                                   ? Theme.of(context).textTheme.headline4!.copyWith(
                                 fontSize: 13,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               )
                                   : Theme.of(context).textTheme.headline6!.copyWith(
                                 fontSize: 10,
-                                color: Colors.grey,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
-                          SizedBox(height: defaultPadding / 2),
+                          const SizedBox(height: defaultPadding / 2),
                         ],
                       ),
                     ],

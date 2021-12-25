@@ -13,7 +13,7 @@ class Education extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(0,25,25,10),
+              padding: const EdgeInsets.fromLTRB(0,25,25,10),
               child: Text(
                 "EDUCATION",
                 style: Responsive.isDesktop(context)
@@ -108,11 +108,11 @@ class Education extends StatelessWidget {
                         style: Responsive.isDesktop(context)
                             ? Theme.of(context).textTheme.headline4!.copyWith(
                           fontSize: 16,
-                          color: Colors.grey,
+                          color: Colors.black54,
                         )
                             : Theme.of(context).textTheme.headline6!.copyWith(
                           fontSize: 14,
-                          color: Colors.grey,
+                          color: Colors.black54,
                         ),
                       ),
                     ),
@@ -122,15 +122,15 @@ class Education extends StatelessWidget {
                         style: Responsive.isDesktop(context)
                             ? Theme.of(context).textTheme.headline4!.copyWith(
                           fontSize: 16,
-                          color: Colors.grey,
+                          color: Colors.black54,
                         )
                             : Theme.of(context).textTheme.headline6!.copyWith(
                           fontSize: 14,
-                          color: Colors.grey,
+                          color: Colors.black54,
                         ),
                       ),
                     ),
-                    SizedBox(height: defaultPadding / 2),
+                    const SizedBox(height: defaultPadding / 2),
                   ],
                 ),
               ],

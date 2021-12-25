@@ -88,11 +88,11 @@ class Info extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
+                      children: const [
                       Education(),
                       SizedBox(width: defaultPadding *4),
                       HumanLanguages(),
-                    ],):Row(children: [
+                    ],):Row(children: const [
                       Education(),
                       SizedBox(width: defaultPadding *4),
                       HumanLanguages(),
@@ -106,7 +106,7 @@ class Info extends StatelessWidget {
               HumanLanguages(),
             ],),
             PersonalInformation(),
-            SizedBox(height: defaultPadding ),
+            const SizedBox(height: defaultPadding ),
             //button cv
             ElevatedButton(
               onPressed: () {},

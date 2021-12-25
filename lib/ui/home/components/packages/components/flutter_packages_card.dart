@@ -31,7 +31,8 @@ class FlutterPackagesCard extends StatelessWidget {
                       const TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 23),
                 ),
               ),
-              Text(packages.date!),
+              Text(packages.date!, style:
+              const TextStyle(color: Colors.black54,)),
               const SizedBox(height: defaultPadding),
               Text(
                 packages.body!,

@@ -1,8 +1,6 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/home/components/contact_me/components/my_contact_data.dart';
@@ -191,12 +189,14 @@ class ContactMeState extends State<ContactMe> {
                 "You can contact me in any time. ",
                 style: Responsive.isDesktop(context)
                     ? Theme.of(context).textTheme.headline1!.copyWith(
+                  fontWeight: FontWeight.bold,
                   fontSize: 20,
-                  color: Colors.black54,
+                  color: Colors.black,
                 )
                     : Theme.of(context).textTheme.subtitle1!.copyWith(
+                  fontWeight: FontWeight.bold,
                   fontSize: 20,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
               ),
             ],),
@@ -469,7 +469,7 @@ class ContactMeState extends State<ContactMe> {
                           ),
                         ),
                         //my data
-                        Expanded(flex: 3, child: MyContactData())
+                        const Expanded(flex: 3, child: MyContactData())
                       ])
                 ])
             ),

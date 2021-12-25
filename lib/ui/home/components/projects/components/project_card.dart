@@ -47,10 +47,11 @@ class ProjectCard extends StatelessWidget {
                 project.description!,
                 maxLines: Responsive.isMobileLarge(context) ? 2 : 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: Responsive.isLaptop(context)?10 : 16, height: 1.5, color: type==1?Colors.white60:Colors.black45),
+                style: TextStyle(fontSize: Responsive.isLaptop(context)?10 : 16, height: 1.5, color: type==1?Colors.white70:Colors.black54),
               ),
               Spacer(),
             //view project button
+
             Padding(
               padding: Responsive.isLaptop(context)? EdgeInsets.only(top: 6.0): EdgeInsets.only(top: 12.0),
               child: FlatButton(
