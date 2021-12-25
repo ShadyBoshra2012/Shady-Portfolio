@@ -17,7 +17,7 @@ class Info extends StatelessWidget {
     return Container(
       color: secondaryColor,
       child: Padding(
-        padding: const EdgeInsets.only(top: 18.0),
+        padding: const EdgeInsets.fromLTRB(12,18,12,8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

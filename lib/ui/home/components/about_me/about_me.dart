@@ -146,19 +146,25 @@ class AboutMe extends StatelessWidget {
                     children: [
                       Responsive.isTablet(context)
                           ? Padding(
-                            padding: const EdgeInsets.fromLTRB(25,8,25,15),
+                            padding: const EdgeInsets.fromLTRB(8,8,8,15),
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.all(16.0),
+                                    padding: const EdgeInsets.all(12.0),
                                     child: Card(
                                       color: Colors.white,
                                       child: Stack(
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(20.0),
-                                            child: Image.asset(
+                                            child: Responsive.isMobileLarge(context)?
+                                            Image.asset(
+                                              'assets/images/shady.jpg',
+                                              width: 650.0,
+                                              height: 300.0,
+                                              fit: BoxFit.cover,
+                                            ):Image.asset(
                                               'assets/images/shady.jpg',
                                               width: 650.0,
                                               height: 500.0,
