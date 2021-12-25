@@ -62,6 +62,7 @@ class _HoverIconButtonState extends State<HoverIconButton> {
             Text(widget.text,style: TextStyle(
               fontWeight: FontWeight.bold,
               color: textColor,
+              fontSize: 12
             ),),
           ],
         ),
