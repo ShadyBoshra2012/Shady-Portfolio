@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_counter.dart';
 import 'package:portfolio/constants.dart';
@@ -20,40 +21,59 @@ class HighLightsInfo extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      HeighLight(
-                        counter: AnimatedCounter(
-                          value: 12,
-                          text: "",
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: myBoxDecoration(),
+                        child:  HeighLight(
+                          counter: AnimatedCounter(
+                            value: 12,
+                            text: "",
+                          ),
+                          label: "Projects",
                         ),
-                        label: "Projects",
                       ),
-                      HeighLight(
-                        counter: AnimatedCounter(
-                          value: 4,
-                          text: "",
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: myBoxDecoration(),
+                        child:  HeighLight(
+                          counter: AnimatedCounter(
+                            value: 13,
+                            text: "+",
+                          ),
+                          label: "Documents",
                         ),
-                        label: "Packages",
                       ),
+
+
+
                     ],
                   ),
                   const SizedBox(height: defaultPadding),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      HeighLight(
-                        counter: AnimatedCounter(
-                          value: 40,
-                          text: "+",
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: myBoxDecoration(),
+                        child:  HeighLight(
+                          counter: AnimatedCounter(
+                            value: 40,
+                            text: "+",
+                          ),
+                          label: "GitHub Repository",
                         ),
-                        label: "GitHub Repository",
                       ),
-                      HeighLight(
-                        counter: AnimatedCounter(
-                          value: 13,
-                          text: "+",
+                      Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: myBoxDecoration(),
+                        child:  HeighLight(
+                          counter: AnimatedCounter(
+                            value: 4,
+                            text: "",
+                          ),
+                          label: "Packages",
                         ),
-                        label: "Documents",
                       ),
                     ],
                   ),
@@ -62,36 +82,61 @@ class HighLightsInfo extends StatelessWidget {
           )
           : Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          HeighLight(
-            counter: AnimatedCounter(
-              value: 12,
-              text: "",
+        children:  [
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: myBoxDecoration(),
+            child:  HeighLight(
+              counter: AnimatedCounter(
+                value: 12,
+                text: "",
+              ),
+              label: "Projects",
             ),
-            label: "Projects",
           ),
-          HeighLight(
-            counter: AnimatedCounter(
-              value: 4,
-              text: "",
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: myBoxDecoration(),
+            child:  HeighLight(
+              counter: AnimatedCounter(
+                value: 4,
+                text: "",
+              ),
+              label: "Packages",
             ),
-            label: "Packages",
           ),
-          HeighLight(
-            counter: AnimatedCounter(
-              value: 40,
-              text: "+",
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: myBoxDecoration(),
+            child:  HeighLight(
+              counter: AnimatedCounter(
+                value: 40,
+                text: "+",
+              ),
+              label: "GitHub Repository",
             ),
-            label: "GitHub Repository",
           ),
-          HeighLight(
-            counter: AnimatedCounter(
-              value: 13,
-              text: "+",
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: myBoxDecoration(),
+            child:  HeighLight(
+              counter: AnimatedCounter(
+                value: 13,
+                text: "+",
+              ),
+              label: "Documents",
             ),
-            label: "Documents",
           ),
         ],
+      ),
+    );
+  }
+  BoxDecoration myBoxDecoration() {
+    return BoxDecoration(
+      color: Colors.white70,
+      border: Border.all(
+        width: 1,
+        color: primaryColor,
       ),
     );
   }

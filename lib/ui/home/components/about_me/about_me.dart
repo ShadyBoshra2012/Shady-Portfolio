@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/home/components/about_me/components/info.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({
@@ -424,75 +426,86 @@ class AboutMe extends StatelessWidget {
                                                                 MainAxisAlignment
                                                                     .start,
                                                             children: [
-                                                              Card(
-                                                                color:
-                                                                    primaryColor,
-                                                                child: Padding(
-                                                                  padding:
-                                                                      const EdgeInsets
-                                                                              .all(
-                                                                          10.0),
-                                                                  child:
-                                                                      Image.asset(
-                                                                    'icons/soial_icons/facebook.png',
-                                                                    height: 25.0,
-                                                                    width: 25.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
+                                                              GestureDetector(
+                                                                onTap:()=>_facebookURL(),
+                                                                child: Card(
+                                                                  color:
+                                                                      primaryColor,
+                                                                  child: Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                                .all(
+                                                                            10.0),
+                                                                    child:
+                                                                        Image.asset(
+                                                                      'icons/soial_icons/facebook.png',
+                                                                      height: 25.0,
+                                                                      width: 25.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Card(
-                                                                color:
-                                                                    primaryColor,
-                                                                child: Padding(
-                                                                  padding:
-                                                                      const EdgeInsets
-                                                                              .all(
-                                                                          10.0),
-                                                                  child:
-                                                                      Image.asset(
-                                                                    'icons/soial_icons/twitter.png',
-                                                                    height: 25.0,
-                                                                    width: 25.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
+                                                              GestureDetector(
+                                                                onTap:()=>_tweeterURL(),
+                                                                child: Card(
+                                                                  color:
+                                                                      primaryColor,
+                                                                  child: Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                                .all(
+                                                                            10.0),
+                                                                    child:
+                                                                        Image.asset(
+                                                                      'icons/soial_icons/twitter.png',
+                                                                      height: 25.0,
+                                                                      width: 25.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Card(
-                                                                color:
-                                                                    primaryColor,
-                                                                child: Padding(
-                                                                  padding:
-                                                                      const EdgeInsets
-                                                                              .all(
-                                                                          10.0),
-                                                                  child:
-                                                                      Image.asset(
-                                                                    'icons/soial_icons/linkedin.png',
-                                                                    height: 25.0,
-                                                                    width: 25.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
+                                                              GestureDetector(
+                                                                onTap: () => _linkedInURL(),
+                                                                child: Card(
+                                                                  color: primaryColor,
+                                                                  child: Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                                .all(
+                                                                            10.0),
+                                                                    child:
+                                                                        Image.asset(
+                                                                      'icons/soial_icons/linkedin.png',
+                                                                      height: 25.0,
+                                                                      width: 25.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Card(
-                                                                color:
-                                                                    primaryColor,
-                                                                child: Padding(
-                                                                  padding:
-                                                                      const EdgeInsets
-                                                                              .all(
-                                                                          10.0),
-                                                                  child:
-                                                                      Image.asset(
-                                                                    'icons/soial_icons/github.png',
-                                                                    height: 25.0,
-                                                                    width: 25.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
+                                                              GestureDetector(
+                                                                onTap: () =>_gitHubURL(),
+                                                                child: Card(
+                                                                  color:
+                                                                      primaryColor,
+                                                                  child: Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                                .all(
+                                                                            10.0),
+                                                                    child:
+                                                                        Image.asset(
+                                                                      'icons/soial_icons/github.png',
+                                                                      height: 25.0,
+                                                                      width: 25.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
@@ -514,11 +527,54 @@ class AboutMe extends StatelessWidget {
                       //download cv button
                     ],
                   ),
-
-
           ],
         ),
       ),
     );
+  }
+
+  // _linkedInURL() async {
+  //   const url = 'https://www.linkedin.com/in/ShadyBoshra2012';
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
+  // _gitHubURL() async {
+  //   const url = 'https://github.com/ShadyBoshra2012';
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
+  // _facebookURL() async {
+  //   const url = 'https://www.facebook.com/shadyboshra2012/';
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
+  // _tweeterURL() async {
+  //   const url = 'https://twitter.com/ShadyBoshra2012';
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
+  _facebookURL() async {
+    await FlutterWebBrowser.openWebPage(url: "https://www.facebook.com/shadyboshra2012/");
+  }
+  _linkedInURL() async {
+    await FlutterWebBrowser.openWebPage(url: "https://www.linkedin.com/in/ShadyBoshra2012");
+  }
+  _gitHubURL() async {
+    await FlutterWebBrowser.openWebPage(url: "https://github.com/ShadyBoshra2012");
+  }
+  _tweeterURL() async {
+    await FlutterWebBrowser.openWebPage(url: "https://twitter.com/ShadyBoshra2012");
   }
 }
