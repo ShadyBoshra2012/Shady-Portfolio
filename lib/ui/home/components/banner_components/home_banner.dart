@@ -70,29 +70,21 @@ class HomeBanner extends StatelessWidget {
                                                 color: Colors.black,
                                               ),
                                     ),
-                                    // Flexible(
-                                    //   child: Text(
-                                    //     "The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.",
-                                    //     style: Responsive.isDesktop(context)
-                                    //         ? Theme.of(context)
-                                    //         .textTheme
-                                    //         .headline3!
-                                    //         .copyWith(
-                                    //       fontWeight: FontWeight.bold,
-                                    //       fontSize: 20,
-                                    //       color: Colors.black54,
-                                    //     )
-                                    //         : Theme.of(context)
-                                    //         .textTheme
-                                    //         .headline5!
-                                    //         .copyWith(
-                                    //       fontSize: 14,
-                                    //       fontWeight: FontWeight.bold,
-                                    //       color: Colors.black54,
-                                    //     ),
-                                    //   ),
-                                    // ),
                                     MyBuildAnimatedText(),
+                                    Expanded(
+                                      flex: 3,
+                                      child: Text(
+                                        "The namics of how users interact with interactive elements within \na user interface flow chart based on container proportion.",
+                                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                                          fontSize: 12,
+                                          color: Colors.black87,
+                                        ),
+                                        textAlign: TextAlign.justify,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 5,
+
+                                      ),
+                                    ),
 
                                     Padding(
                                       padding: const EdgeInsets.only(top: 20.0),
@@ -140,6 +132,7 @@ class HomeBanner extends StatelessWidget {
                             ),
                           ],
                         )
+                      // this is when be large screen
                       : Row(
                           children: [
                             Padding(
@@ -188,6 +181,20 @@ class HomeBanner extends StatelessWidget {
                                             ),
                                   ),
                                   MyBuildAnimatedText(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text(
+                                      "The namics of how users interact with interactive elements within \na user interface flow chart based on container proportion.",
+                                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                                        fontSize: 13,
+                                        color: Colors.black87,
+                                      ),
+                                      textAlign: TextAlign.justify,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 5,
+
+                                    ),
+                                  ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 20.0),
                                     child: Row(children: [
@@ -295,7 +302,21 @@ class HomeBanner extends StatelessWidget {
                                           ),
                                 ),
                                 MyBuildAnimatedText(),
-                                // MyBuildAnimatedText(),
+                                // no new line in phone screen
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: Text(
+                                    "The names of how users interact with interactive elements within a user interface flow chart based on container proportion.",
+                                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                                      fontSize: 10,
+                                      color: Colors.black87,
+                                    ),
+                                    textAlign: TextAlign.justify,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 5,
+
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20.0),
                                   child: Row(children: [
@@ -336,6 +357,7 @@ class HomeBanner extends StatelessWidget {
                       ),
                     ],
                   )
+        // this screen when be laptop and tablet
                 : Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -386,7 +408,35 @@ class HomeBanner extends StatelessWidget {
                                       ),
                             ),
                             MyBuildAnimatedText(),
-                            // MyBuildAnimatedText(),
+                            Responsive.isTablet(context)?
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text(
+                                "The names of how users interact with interactive \nelements within a user interface flow chart \nbased on container proportion.",
+                                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 11,
+                                  color: Colors.black87,
+                                ),
+                                textAlign: TextAlign.justify,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 5,
+
+                              ),
+                            )
+                                : Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: Text(
+                              "The namics of how users interact with interactive elements within \na user interface flow chart based on container proportion.",
+                              style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                                  fontSize: 13,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.justify,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 5,
+
+                            ),
+                                ),
                             Padding(
                               padding: const EdgeInsets.only(top: 20.0),
                               child: Row(children: [
