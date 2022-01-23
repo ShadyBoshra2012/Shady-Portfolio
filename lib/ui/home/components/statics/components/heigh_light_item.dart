@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/responsive.dart';
 
 // style of text in highlights
 class HeighLight extends StatelessWidget {
@@ -18,8 +19,7 @@ class HeighLight extends StatelessWidget {
       children: [
         counter,
         SizedBox(width: defaultPadding / 2),
-        Text(label!, style: TextStyle(color: Colors.black)),
-
+        Text(label!, style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500 ,fontSize: Responsive.isMobile(context)? 12:15)),
       ],
     );
   }

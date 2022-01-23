@@ -23,30 +23,63 @@ class HighLightsInfo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(4),
+                        width: 160,
+                        height: 70,
+                        padding: EdgeInsets.all(12),
                         decoration: myBoxDecoration(),
-                        child:  HeighLight(
-                          counter: AnimatedCounter(
-                            value: 12,
-                            text: "",
+                        child:  Center(
+                          child: Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(right: 12.0),
+                                child: Icon(
+                                  Icons.contact_mail,
+                                  color: primaryColor,
+                                  size: 30.0,
+                                ),
+                              ),
+                              Center(
+                                child: HeighLight(
+                                  counter: AnimatedCounter(
+                                    value: 12,
+                                    text: "",
+                                  ),
+                                  label: "Projects",
+                                ),
+                              ),
+                            ],
                           ),
-                          label: "Projects",
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(4),
+                        width: 160,
+                        height: 70,
+                        padding: EdgeInsets.all(12),
                         decoration: myBoxDecoration(),
-                        child:  HeighLight(
-                          counter: AnimatedCounter(
-                            value: 13,
-                            text: "+",
+                        child:  Center(
+                          child: Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(right: 8.0),
+                                child: Icon(
+                                  Icons.picture_as_pdf,
+                                  color: primaryColor,
+                                  size: 30.0,
+                                ),
+                              ),
+                              Center(
+                                child: HeighLight(
+                                  counter: AnimatedCounter(
+                                    value: 4,
+                                    text: "",
+                                  ),
+                                  label: "Documents",
+                                ),
+                              ),
+                            ],
                           ),
-                          label: "Documents",
                         ),
                       ),
-
-
-
                     ],
                   ),
                   const SizedBox(height: defaultPadding),
@@ -54,25 +87,61 @@ class HighLightsInfo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(4),
+                        width: 160,
+                        height: 70,
+                        padding: EdgeInsets.all(12),
                         decoration: myBoxDecoration(),
-                        child:  HeighLight(
-                          counter: AnimatedCounter(
-                            value: 40,
-                            text: "+",
+                        child:  Center(
+                          child: Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(right: 12.0),
+                                child: Icon(
+                                  Icons.gite,
+                                  color: primaryColor,
+                                  size: 30.0,
+                                ),
+                              ),
+                              Center(
+                                child: HeighLight(
+                                  counter: AnimatedCounter(
+                                    value: 40,
+                                    text: "+",
+                                  ),
+                                  label: "GitHub\nRepository",
+                                ),
+                              ),
+                            ],
                           ),
-                          label: "GitHub Repository",
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(4),
+                        width: 160,
+                        height: 70,
+                        padding: EdgeInsets.all(12),
                         decoration: myBoxDecoration(),
-                        child:  HeighLight(
-                          counter: AnimatedCounter(
-                            value: 4,
-                            text: "",
+                        child:  Center(
+                          child: Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(right: 12.0),
+                                child: Icon(
+                                  Icons.backpack_rounded,
+                                  color: primaryColor,
+                                  size: 30.0,
+                                ),
+                              ),
+                              Center(
+                                child: HeighLight(
+                                  counter: AnimatedCounter(
+                                    value: 10,
+                                    text: "",
+                                  ),
+                                  label: "Packages",
+                                ),
+                              ),
+                            ],
                           ),
-                          label: "Packages",
                         ),
                       ),
                     ],
@@ -80,51 +149,245 @@ class HighLightsInfo extends StatelessWidget {
                 ],
               ),
           )
-          : Row(
+          : Responsive.isTablet(context)
+          ?Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:  [
           Container(
-            padding: EdgeInsets.all(8),
+            width: 170,
+            height: 70,
+            padding: EdgeInsets.all(12),
             decoration: myBoxDecoration(),
-            child:  HeighLight(
-              counter: AnimatedCounter(
-                value: 12,
-                text: "",
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.contact_mail,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 12,
+                        text: "",
+                      ),
+                      label: "Projects",
+                    ),
+                  ),
+                ],
               ),
-              label: "Projects",
             ),
           ),
           Container(
-            padding: EdgeInsets.all(8),
+            width: 170,
+            height: 70,
+            padding: EdgeInsets.all(12),
             decoration: myBoxDecoration(),
-            child:  HeighLight(
-              counter: AnimatedCounter(
-                value: 4,
-                text: "",
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: Icon(
+                      Icons.picture_as_pdf,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 4,
+                        text: "",
+                      ),
+                      label: "Documents",
+                    ),
+                  ),
+                ],
               ),
-              label: "Packages",
             ),
           ),
           Container(
+            width: 170,
+            height: 70,
             padding: EdgeInsets.all(8),
             decoration: myBoxDecoration(),
-            child:  HeighLight(
-              counter: AnimatedCounter(
-                value: 40,
-                text: "+",
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.gite,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 40,
+                        text: "+",
+                      ),
+                      label: "GitHub\nRepository",
+                    ),
+                  ),
+                ],
               ),
-              label: "GitHub Repository",
             ),
           ),
           Container(
-            padding: EdgeInsets.all(8),
+            width: 170,
+            height: 70,
+            padding: EdgeInsets.all(12),
             decoration: myBoxDecoration(),
-            child:  HeighLight(
-              counter: AnimatedCounter(
-                value: 13,
-                text: "+",
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.backpack_rounded,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 10,
+                        text: "",
+                      ),
+                      label: "Packages",
+                    ),
+                  ),
+                ],
               ),
-              label: "Documents",
+            ),
+          ),
+        ],
+      )
+          :Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children:  [
+          Container(
+            width: 210,
+            height: 80,
+            padding: EdgeInsets.all(12),
+            decoration: myBoxDecoration(),
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.contact_mail,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 12,
+                        text: "",
+                      ),
+                      label: "Projects",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 210,
+            height: 80,
+            padding: EdgeInsets.all(12),
+            decoration: myBoxDecoration(),
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: Icon(
+                      Icons.picture_as_pdf,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 4,
+                        text: "",
+                      ),
+                      label: "Documents",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 210,
+            height: 80,
+            padding: EdgeInsets.all(12),
+            decoration: myBoxDecoration(),
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.gite,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 40,
+                        text: "+",
+                      ),
+                      label: "GitHub\nRepository",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 210,
+            height: 80,
+            padding: EdgeInsets.all(12),
+            decoration: myBoxDecoration(),
+            child:  Center(
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: Icon(
+                      Icons.backpack_rounded,
+                      color: primaryColor,
+                      size: 30.0,
+                    ),
+                  ),
+                  Center(
+                    child: HeighLight(
+                      counter: AnimatedCounter(
+                        value: 10,
+                        text: "",
+                      ),
+                      label: "Packages",
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -134,8 +397,9 @@ class HighLightsInfo extends StatelessWidget {
   BoxDecoration myBoxDecoration() {
     return BoxDecoration(
       color: Colors.white70,
+      borderRadius: BorderRadius.circular(5),
       border: Border.all(
-        width: 1,
+        width: 2,
         color: primaryColor,
       ),
     );

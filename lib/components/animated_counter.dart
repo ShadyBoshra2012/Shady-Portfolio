@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/responsive.dart';
 
 class AnimatedCounter extends StatelessWidget {
   const AnimatedCounter({
@@ -18,10 +19,7 @@ class AnimatedCounter extends StatelessWidget {
       duration: defaultDuration,
       builder: (context, value, child) => Text(
         "$value$text",
-        style: Theme.of(context)
-            .textTheme
-            .headline6!
-            .copyWith(color: primaryColor),
+        style: TextStyle(color:Colors.black, fontSize: Responsive.isMobile(context)? 12:15),
       ),
     );
   }

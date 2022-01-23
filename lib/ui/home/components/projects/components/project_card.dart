@@ -29,7 +29,7 @@ class ProjectCard extends StatelessWidget {
             children: [
                CircleAvatar(
                 backgroundColor: bgColor,
-                radius: Responsive.isLaptop(context)?25:30,
+                radius: Responsive.isMobile(context)?20:Responsive.isLaptop(context)?25:30,
                 backgroundImage: const AssetImage("assets/images/bg.jpeg"),
               ),
               Padding(
@@ -45,15 +45,16 @@ class ProjectCard extends StatelessWidget {
               Spacer(),
               Text(
                 project.description!,
-                maxLines: Responsive.isMobileLarge(context) ? 2 : 2,
+                maxLines: Responsive.isMobile(context) ? 1 :
+                Responsive.isTablet(context) ? 2 :3,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: Responsive.isLaptop(context)?10 : 16, height: 1.5, color: type==1?Colors.white70:Colors.black54),
+                style: TextStyle(fontSize: Responsive.isLaptop(context)?10 : 16, height:Responsive.isMobile(context)? 1.2: 1.5, color: type==1?Colors.white70:Colors.black54),
               ),
               Spacer(),
             //view project button
-
-            Padding(
-              padding: Responsive.isLaptop(context)? EdgeInsets.only(top: 6.0): EdgeInsets.only(top: 12.0),
+              Padding(
+              padding: Responsive.isMobile(context)? EdgeInsets.only(top: 6.0):
+              Responsive.isLaptop(context)? EdgeInsets.only(top: 6.0): EdgeInsets.only(top: 12.0),
               child: FlatButton(
                 color: type==1?Colors.white24 :Colors.white70,
                 onPressed: () => showDialog<String>(
