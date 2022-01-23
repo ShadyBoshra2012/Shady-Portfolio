@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/home/components/contact_me/contact_me.dart';
+import 'package:portfolio/ui/home/components/services/my_services.dart';
 import 'package:portfolio/ui/home/components/statics/components/data_heigh_lights.dart';
 import 'package:portfolio/ui/home/components/contact_me/components/power_by.dart';
 import 'package:portfolio/ui/home/components/test/send_msg.dart';
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         Skills(),
         MyProjects(),
         Packages(),
-        // SendMessage(),
+        MyServices(),
         ContactMe(),
         PowerBy(),
       ],
