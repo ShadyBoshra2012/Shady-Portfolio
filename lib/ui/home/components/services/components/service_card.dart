@@ -15,8 +15,6 @@ class ServiceCard extends StatelessWidget {
 
   final Project project;
 
-  //TODO error in overflow: TextOverflow.ellipsis
-  //error line : A RenderFlex overflowed by 9.2 pixels on the bottom
   @override
   Widget build(BuildContext context) {
     return OnHover(builder: (isHovered) {

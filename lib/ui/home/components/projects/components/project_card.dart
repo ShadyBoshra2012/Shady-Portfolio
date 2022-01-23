@@ -13,8 +13,6 @@ class ProjectCard extends StatelessWidget {
   final Project project;
   final int type;
 
-  //TODO error in overflow: TextOverflow.ellipsis
-  //error line : A RenderFlex overflowed by 9.2 pixels on the bottom
   @override
   Widget build(BuildContext context) {
     return Flexible(

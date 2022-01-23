@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/home/components/contact_me/contact_me.dart';
+import 'package:portfolio/ui/home/components/last_work/last_works.dart';
 import 'package:portfolio/ui/home/components/services/my_services.dart';
 import 'package:portfolio/ui/home/components/statics/components/data_heigh_lights.dart';
 import 'package:portfolio/ui/home/components/contact_me/components/power_by.dart';
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MainScreen(
       children: [
+
         HomeBanner(),
         AboutMe(),
         MyStatics(),
@@ -27,6 +29,7 @@ class HomeScreen extends StatelessWidget {
         MyProjects(),
         Packages(),
         MyServices(),
+        LastWorks(),
         ContactMe(),
         PowerBy(),
       ],

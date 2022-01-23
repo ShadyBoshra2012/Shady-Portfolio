@@ -7,6 +7,8 @@ const bodyTextColor = Color(0xFFBAB8B8);
 const bgColor = Color(0xFFFFFFFF);
 const cardProjectColor = Color(0xFFFFFFFF);
 const cardPackageColor = Color(0xFFECE9E9);
+const noColor = Color(0xFFFFFF);
+const withColor = Color(0x77474747);
 
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1); // we use it on our animation

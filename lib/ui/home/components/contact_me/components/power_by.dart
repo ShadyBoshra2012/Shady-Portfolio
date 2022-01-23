@@ -16,40 +16,15 @@ class PowerBy extends StatelessWidget {
        color: const Color(0xFF24242E),
        child: Padding(
          padding: const EdgeInsets.all(8.0),
-         child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: [
-             Row(
-               mainAxisAlignment: MainAxisAlignment.start,
-               crossAxisAlignment: CrossAxisAlignment.start,
-               children: [
-                 // Spacer(),
-                 IconButton(
-                   onPressed: () {},
-                   icon: SvgPicture.asset("assets/icons/linkedin.svg"),
-                 ),
-                 IconButton(
-                   onPressed: () {},
-                   icon: SvgPicture.asset("assets/icons/github.svg"),
-                 ),
-                 IconButton(
-                   onPressed: () {},
-                   icon: SvgPicture.asset("assets/icons/twitter.svg"),
-                 ),
-                 // Spacer(),
-               ],
-             ),
-             const Padding(
-               padding: EdgeInsets.all(8.0),
-               child: Text(
-                 "POWER BY eng.MINA MAGID",
-                 textAlign: TextAlign.left,
-                 style: TextStyle(color: Colors.white60),
-               ),
-             ),
-
-           ],
+         child:  const Padding(
+           padding: EdgeInsets.all(8.0),
+           child: Text(
+             "POWER BY eng.MINA MAGID",
+             textAlign: TextAlign.left,
+             style: TextStyle(color: Colors.white60),
+           ),
          ),
+
        ),
      );
   }
