@@ -13,13 +13,14 @@ class PowerBy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return Container(
+     width: double.infinity,
        color: const Color(0xFF24242E),
-       child: Padding(
-         padding: const EdgeInsets.all(8.0),
-         child:  const Padding(
+       child: const Padding(
+         padding: EdgeInsets.all(8.0),
+         child:  Padding(
            padding: EdgeInsets.all(8.0),
            child: Text(
-             "POWER BY eng.MINA MAGID",
+             "POWER BY MINA MAGID",
              textAlign: TextAlign.left,
              style: TextStyle(color: Colors.white60),
            ),

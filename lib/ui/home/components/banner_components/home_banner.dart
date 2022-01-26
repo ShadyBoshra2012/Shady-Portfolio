@@ -247,16 +247,16 @@ class HomeBanner extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/shady.jpg',
-                        width: 400.0,
+                        width: 425.0,
                         height: 600.0,
                         fit: BoxFit.cover,
                       ),
                       Center(
                         child: Container(
-                          margin: Responsive.isMobileLarge(context)?EdgeInsets.fromLTRB(32, 120, 50, 0):EdgeInsets.fromLTRB(40, 120, 40, 0),
+                          margin: Responsive.isMobileLarge(context)?EdgeInsets.fromLTRB(32, 120, 32, 0):EdgeInsets.fromLTRB(40, 120, 40, 0),
                           color: Colors.white70,
                           child: Padding(
-                            padding: Responsive.isMobileLarge(context)? EdgeInsets.fromLTRB(12, 30, 8, 30):EdgeInsets.fromLTRB(22, 30, 12, 30),
+                            padding: Responsive.isMobileLarge(context)? EdgeInsets.fromLTRB(12, 30, 12, 30):EdgeInsets.fromLTRB(22, 30, 12, 30),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,

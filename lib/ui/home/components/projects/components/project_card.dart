@@ -36,8 +36,13 @@ class ProjectCard extends StatelessWidget {
                   project.title!,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: Responsive.isLaptop(context)?12 : 16
-                      , fontWeight: FontWeight.w700,color: type==1?Colors.white:Colors.black),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5!
+                      .copyWith(
+                    fontSize: Responsive.isLaptop(context)?12 : 16
+                    , fontWeight: FontWeight.w700,color: type==1?Colors.white:Colors.black,
+                  ),
                 ),
               ),
               Spacer(),
@@ -46,7 +51,14 @@ class ProjectCard extends StatelessWidget {
                 maxLines: Responsive.isMobile(context) ? 1 :
                 Responsive.isTablet(context) ? 2 :3,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: Responsive.isLaptop(context)?10 : 16, height:Responsive.isMobile(context)? 1.2: 1.5, color: type==1?Colors.white70:Colors.black54),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline3!
+                    .copyWith(
+                  fontSize: Responsive.isLaptop(context)?10 : 16, height:Responsive.isMobile(context)?
+                1.2: 1.5, color: type==1?Colors.white70:Colors.black54
+                  , fontWeight: FontWeight.normal,
+                ),
               ),
               Spacer(),
             //view project button
@@ -88,56 +100,7 @@ class ProjectCard extends StatelessWidget {
                  borderRadius: BorderRadius.circular(4)),
               ),
             ),
-            //dialog of project details
-            // TextButton(
-            //   onPressed: () => showDialog<String>(
-            //     context: context,
-            //     builder: (BuildContext context) => AlertDialog(
-            //       title: Text(project.title!, style:  const TextStyle(height: 1.5, color: Colors.black,fontWeight: FontWeight.bold)),
-            //       content: Text(project.description!, style:  const TextStyle(height: 1.5,color:Colors.black54)),
-            //       actions: <Widget>[
-            //         TextButton(
-            //           onPressed: () => Navigator.pop(context, 'Close'),
-            //           child: const Text('Close'),
-            //         ),
-            //         TextButton(
-            //           onPressed: () => Navigator.pop(context, 'OK'),
-            //           child: const Text('OK'),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            //   FlatButton(
-            //     onPressed: () => showDialog<String>(
-            //       context: context,
-            //       builder: (BuildContext context) => AlertDialog(
-            //         title: Text(project.title!, style:  const TextStyle(height: 1.5, color: Colors.black,fontWeight: FontWeight.bold)),
-            //         content: Text(project.description!, style:  const TextStyle(height: 1.5,color:Colors.black54)),
-            //         actions: <Widget>[
-            //           TextButton(
-            //             onPressed: () => Navigator.pop(context, 'Close'),
-            //             child: const Text('Close'),
-            //           ),
-            //           TextButton(
-            //             onPressed: () => Navigator.pop(context, 'OK'),
-            //             child: const Text('OK'),
-            //           ),
-            //         ],
-            //       ),
-            //     ),
-            //     child: const Text('OK', style: TextStyle(
-            //         color: Colors.black
-            //     )
-            //     ),
-            //     textColor: Colors.white,
-            //     shape: RoundedRectangleBorder(side: const BorderSide(
-            //         color: Colors.white,
-            //         width: 1,
-            //         style: BorderStyle.solid
-            //     ), borderRadius: BorderRadius.circular(10)),
-            //   )
-            //   child: Text('View Project >>>', style: TextStyle(height: 1.5, color:type==1?Colors.white: primaryColor,fontWeight: FontWeight.bold),),
-            // ),
+
             ],
           ),
         ),

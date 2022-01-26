@@ -29,7 +29,7 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
             ),
-      drawer: Container(width: 100,child: LineMenu()),
+      drawer: Container(width: 100,child: LineMenu(children)),
       body: Center(
         child: Container(
           // constraints: BoxConstraints(maxWidth: maxWidth),
@@ -37,10 +37,9 @@ class MainScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (Responsive.isDesktop(context))
-                const Expanded(
+                 Expanded(
                   flex: 1,
-                  child: LineMenu(),
-                ),
+                  child: LineMenu(children)),
               Expanded(
                 flex: 13,
                 child:

@@ -5,12 +5,15 @@ import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/ui/home/components/banner_components/components/hover_icon_btn_widget.dart';
 import 'package:portfolio/ui/main/main_componant/area_info_text.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 // drawer menu
 class LineMenu extends StatelessWidget {
-  const LineMenu({
-    Key? key,
-  }) : super(key: key);
+  LineMenu(this.children, {Key? key}) : super(key: key);
+  final List<Widget> children;
+  final ItemScrollController itemScrollController = ItemScrollController();
+  final ItemPositionsListener itemPositionsListener =
+      ItemPositionsListener.create();
 
   @override
   Widget build(BuildContext context) {
@@ -24,49 +27,85 @@ class LineMenu extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(color: primaryColor,
+                Container(
+                    color: primaryColor,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
-                      children: const [
+                      children:  [
                         Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Center(child: Text("Shady",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 16))),
+                          padding: const EdgeInsets.all(16.0),
+                          child: Center(
+                              child: Text("Shady",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline3!
+                                      .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: Colors.white,)))
                         ),
                       ],
-                    )
-                ),
+                    )),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "HOME",iconText: Icons.home_outlined),
+                  child: HoverIconButton(
+                      onTap: () {
+
+                      },
+                      text: "HOME",
+                      iconText: Icons.home_outlined),
                 ),
                 Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "ABOUT ME",iconText: Icons.contact_mail_outlined),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "ABOUT ME",
+                      iconText: Icons.contact_mail_outlined),
                 ),
                 Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "SERVICES",iconText: Icons.room_service_sharp),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "SERVICES",
+                      iconText: Icons.room_service_sharp),
                 ),
                 Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "PROJECTS",iconText: Icons.work_outline_outlined),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "PROJECTS",
+                      iconText: Icons.work_outline_outlined),
                 ),
                 Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "PACKAGES",iconText: Icons.file_copy_outlined),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "PACKAGES",
+                      iconText: Icons.file_copy_outlined),
                 ),
                 Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: HoverIconButton(onTap: () {}, text: "CONTACTS",iconText: Icons.contacts_outlined),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "BLOGS",
+                      iconText: Icons.bubble_chart_outlined),
                 ),
                 Divider(),
-                const SizedBox(height: defaultPadding )
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: HoverIconButton(
+                      onTap: () {},
+                      text: "CONTACTS",
+                      iconText: Icons.contacts_outlined),
+                ),
+                Divider(),
+                const SizedBox(height: defaultPadding)
                 // OutlinedButton(
                 //   onPressed: () {
                 //     // Respond to button press

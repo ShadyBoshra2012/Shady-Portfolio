@@ -61,11 +61,13 @@ class MyStatics extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(25.0),
-              child: SvgPicture.asset(
-                'assets/icons/certification_cuate.svg',
-                height: 250.0,
-                width: 220.0,
-                fit: BoxFit.cover,
+              child: Center(
+                child: SvgPicture.asset(
+                  'assets/icons/certification_cuate.svg',
+                  height: 250.0,
+                  width: 220.0,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ],)
@@ -73,16 +75,16 @@ class MyStatics extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children:  [
                   //work experiences
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(25,14,25,8),
+                   Padding(
+                    padding: Responsive.isTablet(context)?const EdgeInsets.fromLTRB(25,14,25,8):const EdgeInsets.fromLTRB(35,14,35,8),
                     child: Works_EX(),
                   )
                   ,Padding(
-                    padding: const EdgeInsets.all(25.0),
+                    padding: Responsive.isTablet(context)?const EdgeInsets.only(right: 50.0):const EdgeInsets.only(right: 130.0),
                     child: SvgPicture.asset(
                       'assets/icons/certification_cuate.svg',
-                      height: 250.0,
-                      width: 220.0,
+                      height:Responsive.isTablet(context)?230:350,
+                      width: Responsive.isTablet(context)?230:350,
                       fit: BoxFit.cover,
                     ),
                   ),

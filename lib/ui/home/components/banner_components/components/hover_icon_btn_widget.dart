@@ -8,7 +8,7 @@ class HoverIconButton extends StatefulWidget {
   final IconData iconText;
   final String text;
   final void Function()? onTap;
-  HoverIconButton({required this.text, required this.onTap ,required this.iconText,});
+  const HoverIconButton({Key? key, required this.text, required this.onTap ,required this.iconText,}) : super(key: key);
 
   @override
   _HoverIconButtonState createState() => _HoverIconButtonState();
@@ -59,11 +59,15 @@ class _HoverIconButtonState extends State<HoverIconButton> {
           children: [
             Icon(widget.iconText,color: textColor),
             const SizedBox(height: defaultPadding/3),
-            Text(widget.text,style: TextStyle(
+            Text(widget.text,style: Theme.of(context)
+                .textTheme
+                .headline3!
+                .copyWith(
               fontWeight: FontWeight.bold,
+              fontSize: 13,
               color: textColor,
-              fontSize: 12
-            ),),
+            ),
+            ),
           ],
         ),
       ),
