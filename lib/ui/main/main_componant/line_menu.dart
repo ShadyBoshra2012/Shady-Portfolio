@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/bloc/work_experience_bloc.dart';
 import 'package:portfolio/constants.dart';
@@ -9,7 +8,9 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 // drawer menu
 class LineMenu extends StatelessWidget {
-  LineMenu(this.children, {Key? key}) : super(key: key);
+  LineMenu(this.children, {Key? key, required this.scrollController})
+      : super(key: key);
+  final ScrollController scrollController;
   final List<Widget> children;
   final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener itemPositionsListener =
@@ -32,27 +33,25 @@ class LineMenu extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
-                      children:  [
+                      children: [
                         Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Center(
-                              child: Text("Shady",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.white,)))
-                        ),
+                            padding: const EdgeInsets.all(16.0),
+                            child: Center(
+                                child: Text("Shady",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline3!
+                                        .copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                        )))),
                       ],
                     )),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: HoverIconButton(
-                      onTap: () {
-
-                      },
+                      onTap: () {},
                       text: "HOME",
                       iconText: Icons.home_outlined),
                 ),

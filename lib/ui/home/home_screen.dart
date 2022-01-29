@@ -3,10 +3,7 @@ import 'package:portfolio/ui/home/components/contact_me/contact_me.dart';
 import 'package:portfolio/ui/home/components/last_blogs/last_blogs.dart';
 import 'package:portfolio/ui/home/components/last_work/last_works.dart';
 import 'package:portfolio/ui/home/components/services/my_services.dart';
-import 'package:portfolio/ui/home/components/statics/components/data_heigh_lights.dart';
 import 'package:portfolio/ui/home/components/contact_me/components/power_by.dart';
-import 'package:portfolio/ui/home/components/test/send_msg.dart';
-import 'package:portfolio/ui/home/components/skills/components/programming_languages.dart';
 import 'package:portfolio/ui/home/components/about_me/about_me.dart';
 import 'package:portfolio/ui/home/components/skills/skills.dart';
 import 'package:portfolio/ui/home/components/statics/my_statics.dart';
@@ -21,10 +18,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MainScreen(
-      children: [
+    return MainScreen(
+      children: const [
         HomeBanner(),
-        AboutMe(),
+        AboutMe(key: ValueKey('about_me')),
         MyStatics(),
         Skills(),
         MyProjects(),

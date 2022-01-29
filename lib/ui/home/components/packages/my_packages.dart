@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/data/models/FlutterPackages.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/contact_me/contact_me.dart';
 import 'package:portfolio/ui/home/components/packages/components/flutter_packages_card.dart';
 
 class Packages extends StatelessWidget {

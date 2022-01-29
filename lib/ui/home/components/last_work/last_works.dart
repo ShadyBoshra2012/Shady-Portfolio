@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/data/models/FlutterPackages.dart';
 import 'package:portfolio/data/models/project.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/home/components/last_work/components/last_work_card.dart';
-import 'package:portfolio/ui/home/components/services/components/service_card.dart';
 
 class LastWorks extends StatelessWidget {
   const LastWorks({

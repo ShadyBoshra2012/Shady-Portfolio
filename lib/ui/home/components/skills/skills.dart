@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/about_me/components/human_languages.dart';
-import 'package:portfolio/ui/home/components/test/environments.dart';
-import 'package:portfolio/ui/home/components/about_me/components/info.dart';
-import 'package:portfolio/ui/home/components/skills/components/front_end.dart';
 import 'package:portfolio/ui/home/components/skills/components/programming_languages.dart';
 import 'package:portfolio/ui/home/components/skills/components/environments2.dart';
 

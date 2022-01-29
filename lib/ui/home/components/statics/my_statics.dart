@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/skills/components/front_end.dart';
 import 'package:portfolio/ui/home/components/my_work_ex/works_ex.dart';
 import 'package:portfolio/ui/home/components/statics/components/data_heigh_lights.dart';
 

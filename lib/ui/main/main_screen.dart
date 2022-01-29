@@ -1,11 +1,12 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/main/main_componant/line_menu.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key, required this.children}) : super(key: key);
+  final _screenScrollController = ScrollController();
+
+  MainScreen({Key? key, required this.children}) : super(key: key);
 
   final List<Widget> children;
 
@@ -15,8 +16,9 @@ class MainScreen extends StatelessWidget {
       // We change the appbar on desktop
       appBar: Responsive.isDesktop(context)
           ? null
-          :AppBar(
+          : AppBar(
               backgroundColor: bgColor,
+              title: const Text('Shady'),
               leading: Builder(
                 builder: (context) => IconButton(
                   onPressed: () {
@@ -29,7 +31,7 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
             ),
-      drawer: Container(width: 100,child: LineMenu(children)),
+      drawer: Container(width: 100, child: LineMenu(children, scrollController: _screenScrollController)),
       body: Center(
         child: Container(
           // constraints: BoxConstraints(maxWidth: maxWidth),
@@ -37,13 +39,11 @@ class MainScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (Responsive.isDesktop(context))
-                 Expanded(
-                  flex: 1,
-                  child: LineMenu(children)),
+                Expanded(flex: 1, child: LineMenu(children, scrollController: _screenScrollController)),
               Expanded(
                 flex: 13,
-                child:
-                SingleChildScrollView(
+                child: SingleChildScrollView(
+                  controller: _screenScrollController,
                   child: Column(
                     children: [
                       ...children,

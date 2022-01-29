@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 
 // changed size of text

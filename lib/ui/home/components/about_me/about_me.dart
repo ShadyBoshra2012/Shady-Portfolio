@@ -3,7 +3,6 @@ import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/ui/home/components/about_me/components/info.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({

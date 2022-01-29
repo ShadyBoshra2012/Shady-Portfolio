@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/data/models/project.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/projects/components/project_card.dart';
-import 'package:portfolio/ui/home/components/services/components/hoving.dart';
 
 class LastBlogCard extends StatelessWidget {
   const LastBlogCard({

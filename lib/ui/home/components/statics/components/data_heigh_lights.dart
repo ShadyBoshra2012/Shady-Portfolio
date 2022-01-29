@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_counter.dart';
 import 'package:portfolio/constants.dart';

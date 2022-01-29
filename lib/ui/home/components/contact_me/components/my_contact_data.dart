@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/responsive.dart';
-import 'package:portfolio/ui/home/components/about_me/components/education.dart';
-import 'package:portfolio/ui/home/components/about_me/components/human_languages.dart';
-import 'package:portfolio/ui/home/components/about_me/components/personal_information.dart';
 
 class MyContactData extends StatelessWidget {
   const MyContactData({
