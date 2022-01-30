@@ -42,13 +42,16 @@ class MainScreen extends StatelessWidget {
                 Expanded(flex: 1, child: LineMenu(children, scrollController: _screenScrollController)),
               Expanded(
                 flex: 13,
-                child: SingleChildScrollView(
-                  controller: _screenScrollController,
-                  child: Column(
-                    children: [
-                      ...children,
-                      // our footer
-                    ],
+                child: SizedBox(
+                  height: double.infinity,
+                  child: SingleChildScrollView(
+                    controller: _screenScrollController,
+                    child: Column(
+                      children: [
+                        ...children,
+                        // our footer
+                      ],
+                    ),
                   ),
                 ),
               ),

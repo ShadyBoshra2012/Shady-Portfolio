@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:portfolio/data/models/project.dart';
@@ -53,7 +54,7 @@ class SliderCarousel extends StatelessWidget {
                                           : const EdgeInsets.fromLTRB(0, 8, 0, 4),
                               child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(
+                                child: AutoSizeText(
                                   index.description.toString(),
                                   style: Theme.of(context)
                                       .textTheme
@@ -61,15 +62,16 @@ class SliderCarousel extends StatelessWidget {
                                       .copyWith(
                                         fontWeight: FontWeight.normal,
                                         fontSize: Responsive.isMobile(context)
-                                            ? 8
-                                            : Responsive.isLaptop(context)
-                                                ? 16
-                                                : 22,
+                                            ? 7
+                                            : Responsive.isMobileLarge(context)?7
+                                            : Responsive.isTablet(context) ? 12
+                                            : Responsive.isLaptop(context)? 28 : 35,
                                         color: Colors.black54,
                                       ),
 // overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.justify,
                                   maxLines: 4,
+                                  minFontSize: 7,
                                 ),
                               ),
                             ),
@@ -84,7 +86,7 @@ class SliderCarousel extends StatelessWidget {
           }).toList(),
           carouselController: buttonCarouselController,
           options: CarouselOptions(
-            height: Responsive.isMobileLarge(context)?115:Responsive.isTablet(context)?200:Responsive.isLaptop(context)?300
+            height: Responsive.isMobileLarge(context)?120:Responsive.isTablet(context)?200:Responsive.isLaptop(context)?300
       :Responsive.isDesktop(context)?400:300,
             autoPlay: true,
             enlargeCenterPage: true,
